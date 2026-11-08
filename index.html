@@ -1,0 +1,1758 @@
+<!DOCTYPE html>
+<html lang="hi" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shubh Deepawali — Mere Pyare Dost Ke Naam</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Inter:wght@400;500;600;700&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Rozha+One&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --gold: #fbbf24;
+      --gold-light: #fef08a;
+      --saffron: #ea580c;
+      --sindoor: #991b1b;
+      --maroon: #3b0408;
+      --deep-bg: #1f0306;
+    }
+    body {
+      font-family: 'Poppins', 'Inter', sans-serif;
+      background:
+        radial-gradient(circle at 50% 8%, rgba(234, 88, 12, 0.35) 0%, transparent 45%),
+        radial-gradient(circle at 15% 50%, rgba(185, 28, 28, 0.35) 0%, transparent 50%),
+        radial-gradient(circle at 85% 80%, rgba(217, 119, 6, 0.28) 0%, transparent 50%),
+        linear-gradient(180deg, #2e0509 0%, #43070d 45%, #240307 100%);
+      color: #fffbeb;
+      overflow-x: hidden;
+      min-height: 100vh;
+    }
+    .font-royal {
+      font-family: 'Cinzel Decorative', 'Rozha One', serif;
+    }
+    .font-hindi {
+      font-family: 'Rozha One', 'Poppins', serif;
+    }
+    /* Shimmer & Golden Glow */
+    .gold-gradient-text {
+      background: linear-gradient(135deg, #fef08a 0%, #fbbf24 35%, #f97316 68%, #fde047 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-size: 200% auto;
+      animation: shineText 3.2s linear infinite;
+    }
+    @keyframes shineText {
+      to { background-position: 200% center; }
+    }
+    .gold-border-glow {
+      border: 1.5px solid rgba(251, 191, 36, 0.55);
+      box-shadow: 0 8px 28px rgba(153, 27, 27, 0.45), 0 0 18px rgba(245, 158, 11, 0.22), inset 0 0 15px rgba(251, 191, 36, 0.1);
+    }
+    .gold-border-glow:hover {
+      border-color: rgba(254, 240, 138, 0.95);
+      box-shadow: 0 10px 34px rgba(234, 88, 12, 0.45), 0 0 28px rgba(251, 191, 36, 0.45), inset 0 0 22px rgba(251, 191, 36, 0.18);
+    }
+    .glass-card {
+      background: linear-gradient(145deg, rgba(92, 12, 20, 0.86), rgba(48, 5, 11, 0.92));
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+    }
+    /* Diya Flame Animation */
+    .diya-flame {
+      transform-origin: bottom center;
+      animation: flicker 1.3s ease-in-out infinite alternate;
+      filter: drop-shadow(0 0 12px #fbbf24) drop-shadow(0 0 24px #ea580c);
+    }
+    @keyframes flicker {
+      0% { transform: scale(1) rotate(-3deg); opacity: 0.92; }
+      50% { transform: scale(1.1, 1.18) rotate(3deg); opacity: 1; }
+      100% { transform: scale(0.95, 1.06) rotate(-2deg); opacity: 0.9; }
+    }
+    /* Floating & Swaying Animations */
+    .float-slow {
+      animation: floatY 4.2s ease-in-out infinite;
+    }
+    .float-delayed {
+      animation: floatY 4.8s ease-in-out 1.2s infinite;
+    }
+    @keyframes floatY {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-9px); }
+    }
+    /* Hanging Jhalar Lights & Toran Sway */
+    .toran-sway {
+      transform-origin: top center;
+      animation: swayGarland 3.5s ease-in-out infinite alternate;
+    }
+    @keyframes swayGarland {
+      0% { transform: rotate(-2.5deg); }
+      100% { transform: rotate(2.5deg); }
+    }
+    .jhalar-bulb {
+      animation: bulbTwinkle 1.6s ease-in-out infinite alternate;
+    }
+    .jhalar-bulb:nth-child(even) {
+      animation-delay: 0.8s;
+    }
+    @keyframes bulbTwinkle {
+      0% { opacity: 0.45; transform: scale(0.88); filter: drop-shadow(0 0 4px #fbbf24); }
+      100% { opacity: 1; transform: scale(1.15); filter: drop-shadow(0 0 12px #fef08a); }
+    }
+    /* Sequential Page Opening & Staggered Card Reveal */
+    .page-section {
+      display: none;
+    }
+    .page-section.active {
+      display: block;
+      animation: pageReveal 0.65s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    }
+    @keyframes pageReveal {
+      0% { opacity: 0; transform: translateY(28px) scale(0.96); filter: brightness(1.3); }
+      100% { opacity: 1; transform: translateY(0) scale(1); filter: brightness(1); }
+    }
+    .page-section.active .stagger-1 { animation: cardPopIn 0.55s cubic-bezier(0.22, 1, 0.36, 1) 0.08s both; }
+    .page-section.active .stagger-2 { animation: cardPopIn 0.55s cubic-bezier(0.22, 1, 0.36, 1) 0.18s both; }
+    .page-section.active .stagger-3 { animation: cardPopIn 0.55s cubic-bezier(0.22, 1, 0.36, 1) 0.28s both; }
+    .page-section.active .stagger-4 { animation: cardPopIn 0.55s cubic-bezier(0.22, 1, 0.36, 1) 0.38s both; }
+    @keyframes cardPopIn {
+      0% { opacity: 0; transform: translateY(22px) scale(0.95); }
+      100% { opacity: 1; transform: translateY(0) scale(1); }
+    }
+    /* Mandala & Chakri Spin */
+    .spin-slow {
+      animation: spinMandala 28s linear infinite;
+    }
+    .chakri-spin {
+      animation: spinMandala 1.8s linear infinite;
+    }
+    @keyframes spinMandala {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    /* Pulse CTA Button */
+    .btn-festive-pulse {
+      animation: pulseGold 2s infinite;
+    }
+    @keyframes pulseGold {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(251, 191, 36, 0.65), 0 6px 20px rgba(234, 88, 12, 0.5); }
+      50% { box-shadow: 0 0 0 10px rgba(251, 191, 36, 0), 0 8px 26px rgba(234, 88, 12, 0.75); }
+    }
+    /* Polaroid Tilt */
+    .polaroid-card {
+      transition: all 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    .polaroid-card:hover {
+      transform: translateY(-6px) rotate(0deg) scale(1.02) !important;
+      z-index: 20;
+    }
+    /* Hide scrollbar on nav */
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #240307; }
+    ::-webkit-scrollbar-thumb { background: #d97706; border-radius: 9999px; }
+  </style>
+</head>
+<body class="relative selection:bg-amber-500 selection:text-slate-950 pb-24 sm:pb-12">
+
+  <!-- Background Fireworks, Rockets, Chakri & Floating Sparkles Canvas -->
+  <canvas id="festiveCanvas" class="fixed inset-0 pointer-events-none z-0"></canvas>
+
+  <!-- Animated Rotating Golden Rangoli Corners -->
+  <div class="fixed -top-28 -right-28 w-72 h-72 sm:w-96 sm:h-96 opacity-20 pointer-events-none z-0 spin-slow">
+    <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="100" cy="100" r="92" stroke="#fbbf24" stroke-width="2.5" stroke-dasharray="6 6"/>
+      <circle cx="100" cy="100" r="72" stroke="#f97316" stroke-width="2"/>
+      <circle cx="100" cy="100" r="48" stroke="#fef08a" stroke-width="2.5"/>
+      <path d="M100 8 L118 82 L192 100 L118 118 L100 192 L82 118 L8 100 L82 82 Z" stroke="#fbbf24" stroke-width="2" fill="rgba(251,191,36,0.18)"/>
+      <path d="M34 34 L92 78 L166 34 L122 92 L166 166 L108 122 L34 166 L78 108 Z" stroke="#ea580c" stroke-width="2" fill="rgba(234,88,12,0.15)"/>
+    </svg>
+  </div>
+  <div class="fixed -bottom-28 -left-28 w-72 h-72 sm:w-96 sm:h-96 opacity-20 pointer-events-none z-0 spin-slow">
+    <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="100" cy="100" r="90" stroke="#fbbf24" stroke-width="2.5" stroke-dasharray="5 5"/>
+      <circle cx="100" cy="100" r="65" stroke="#ef4444" stroke-width="2"/>
+      <path d="M100 10 L115 85 L190 100 L115 115 L100 190 L85 115 L10 100 L85 85 Z" stroke="#fbbf24" stroke-width="2" fill="rgba(251,191,36,0.15)"/>
+    </svg>
+  </div>
+
+  <!-- Top Festive Marigold Toran & Twinkling Jhalar Strip -->
+  <div class="relative z-30 w-full overflow-hidden bg-gradient-to-r from-red-950 via-amber-900/80 to-red-950 border-b border-amber-400/40 py-1 px-2">
+    <div class="max-w-6xl mx-auto flex items-center justify-between text-xs sm:text-sm">
+      <div class="flex items-center gap-1.5 sm:gap-3 toran-sway">
+        <span class="jhalar-bulb">🪔</span>
+        <span class="text-amber-300 font-semibold">🌼🌿🌼</span>
+        <span class="jhalar-bulb">✨</span>
+        <span class="hidden sm:inline text-amber-200 font-medium">🌼🌿 शुभ दीपावली • दोस्ती का त्योहार 🌿🌼</span>
+      </div>
+      <div class="flex items-center gap-2">
+        <button id="autoStoryToggleBtn" type="button" class="px-2.5 py-0.5 rounded-full bg-amber-400/20 hover:bg-amber-400/35 border border-amber-300/60 text-amber-200 text-[11px] sm:text-xs font-semibold transition flex items-center gap-1">
+          <span id="autoStoryIcon">▶</span> <span id="autoStoryLabel">Auto Page Play: OFF</span>
+        </button>
+      </div>
+      <div class="flex items-center gap-1.5 sm:gap-3 toran-sway">
+        <span class="jhalar-bulb">✨</span>
+        <span class="text-amber-300 font-semibold">🌼🌿🌼</span>
+        <span class="jhalar-bulb">🪔</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sticky Navigation Header (Mobile-First + 5 Sequential Pages) -->
+  <header class="sticky top-0 z-40 backdrop-blur-xl bg-[#2d050a]/90 border-b border-amber-400/40 shadow-lg shadow-red-950/60">
+    <div class="max-w-6xl mx-auto px-2.5 sm:px-6 py-2 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+      <!-- Top Row on Mobile: Brand + Sound & Patakhe Buttons -->
+      <div class="flex items-center justify-between w-full sm:w-auto">
+        <button id="brandHomeBtn" type="button" class="flex items-center gap-2 text-left group focus:outline-none">
+          <div class="w-9 h-9 rounded-full bg-gradient-to-br from-yellow-300 via-orange-500 to-red-700 flex items-center justify-center shadow-md shadow-amber-500/40 group-hover:scale-110 transition-transform border border-yellow-200">
+            <span class="text-lg" aria-hidden="true">🪔</span>
+          </div>
+          <div>
+            <span class="font-royal text-sm sm:text-base font-bold tracking-wider gold-gradient-text block leading-tight">Diwali Dosti Special</span>
+            <span class="text-[10px] sm:text-[11px] text-amber-200/85 block">5-Page Animated Memory Book</span>
+          </div>
+        </button>
+
+        <!-- Utility Controls: Rocket Firework Burst & Sound -->
+        <div class="flex items-center gap-1.5 sm:hidden">
+          <button id="quickSparkleBtnMobile" type="button" title="Launch Diwali Rockets" class="px-2.5 py-1.5 rounded-full text-xs font-semibold bg-gradient-to-r from-amber-500/30 to-red-600/40 border border-amber-400/60 text-amber-200 active:scale-95 transition flex items-center gap-1">
+            <span>🚀</span> <span>Patakhe</span>
+          </button>
+          <button id="soundToggleBtnMobile" type="button" title="Toggle Festive Sound" class="w-8 h-8 rounded-full bg-red-950/80 border border-amber-400/50 text-amber-200 flex items-center justify-center">
+            <span id="soundIconMobile">🔊</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- 5 Sequential Page Tabs (Scrollable pill bar on mobile) -->
+      <nav aria-label="Website Pages" class="flex items-center gap-1.5 overflow-x-auto no-scrollbar w-full sm:w-auto py-0.5">
+        <button type="button" data-page="1" class="nav-tab flex-1 sm:flex-initial text-center px-3 py-1.5 rounded-full text-xs sm:text-sm font-bold transition-all whitespace-nowrap bg-gradient-to-r from-yellow-400 via-amber-500 to-orange-500 text-red-950 shadow-md shadow-amber-500/30">
+          1. Welcome 🪔
+        </button>
+        <button type="button" data-page="2" class="nav-tab flex-1 sm:flex-initial text-center px-3 py-1.5 rounded-full text-xs sm:text-sm font-medium transition-all whitespace-nowrap text-amber-100/85 bg-red-950/50 border border-amber-500/25 hover:bg-amber-500/20">
+          2. Shayari ✨
+        </button>
+        <button type="button" data-page="3" class="nav-tab flex-1 sm:flex-initial text-center px-3 py-1.5 rounded-full text-xs sm:text-sm font-medium transition-all whitespace-nowrap text-amber-100/85 bg-red-950/50 border border-amber-500/25 hover:bg-amber-500/20">
+          3. 9 Yaadein 📸
+        </button>
+        <button type="button" data-page="4" class="nav-tab flex-1 sm:flex-initial text-center px-3 py-1.5 rounded-full text-xs sm:text-sm font-medium transition-all whitespace-nowrap text-amber-100/85 bg-red-950/50 border border-amber-500/25 hover:bg-amber-500/20">
+          4. Khaas Khat 💌
+        </button>
+        <button type="button" data-page="5" class="nav-tab flex-1 sm:flex-initial text-center px-3 py-1.5 rounded-full text-xs sm:text-sm font-medium transition-all whitespace-nowrap text-amber-100/85 bg-red-950/50 border border-amber-500/25 hover:bg-amber-500/20">
+          5. Utsav 🎆
+        </button>
+      </nav>
+
+      <!-- Desktop Utility Controls -->
+      <div class="hidden sm:flex items-center gap-2">
+        <button id="quickSparkleBtn" type="button" title="Celebrate with Fireworks & Rockets" class="px-2.5 py-1.5 rounded-full text-xs font-medium bg-amber-500/20 hover:bg-amber-500/35 border border-amber-400/50 text-amber-200 transition flex items-center gap-1"><span>🎇</span> <span class="hidden md:inline">Patakhe</span></button>
+        <button id="soundToggleBtn" type="button" title="Toggle Festive Sound" class="px-2.5 py-1.5 rounded-full text-xs font-medium bg-red-950/80 hover:bg-red-900/80 border border-amber-400/40 text-amber-200 transition flex items-center gap-1"><span id="soundIcon">🔊</span> <span id="soundLabel" class="hidden md:inline">Sound On</span></button>
+      </div>
+    </div>
+
+    <!-- Step-by-Step Progress Bar Across 5 Pages -->
+    <div class="w-full h-1.5 bg-red-950">
+      <div id="pageProgressBar" class="h-full bg-gradient-to-r from-yellow-300 via-amber-500 to-orange-600 transition-all duration-500 shadow-[0_0_10px_#fbbf24]" style="width: 20%;"></div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTAINER -->
+  <main id="mainTouchArea" class="relative z-10 max-w-6xl mx-auto px-3 sm:px-6 pt-4 sm:pt-7 pb-8">
+
+    <!-- ==========================================
+         PAGE 1: WELCOME & DIYA LIGHTING CEREMONY
+         ========================================== -->
+    <section id="page-1" class="page-section active" aria-label="Page 1: Shubh Deepawali Welcome">
+      <!-- Top Festive Banner -->
+      <div class="text-center mb-6 sm:mb-8 stagger-1">
+        <div class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-gradient-to-r from-amber-500/25 via-red-800/40 to-amber-500/25 border border-amber-400/50 text-amber-200 text-xs sm:text-sm font-semibold mb-3 shadow-sm">
+          <span>🪔 पेज 1 / 5 • शुभ दीपावली एवं अटूट दोस्ती 🪔</span>
+        </div>
+        <h1 class="font-royal text-2xl sm:text-5xl md:text-6xl font-bold gold-gradient-text tracking-wide leading-tight mb-2.5 px-1">
+          Shubh Deepawali, <span class="friend-name-display">Mere Pyare Dost</span>!
+        </h1>
+        <p class="max-w-2xl mx-auto text-amber-100/90 text-xs sm:text-base md:text-lg leading-relaxed px-2">
+          दीयों की सुनहरी रोशनी से जगमगाता ये आँगन, और उस से भी ज़्यादा चमकती हमारी ये प्यारी सी दोस्ती। इस दिवाली तुम्हारी हर मुस्कान और हर याद के नाम एक खास तोहफ़ा!
+        </p>
+
+        <!-- Friend Name Personalizer (Mobile-Optimized) -->
+        <div class="mt-4 max-w-md mx-auto glass-card gold-border-glow rounded-2xl p-2.5 sm:p-3 flex flex-col sm:flex-row items-stretch sm:items-center gap-2">
+          <div class="flex items-center gap-2 flex-1">
+            <span class="text-amber-300 text-xs sm:text-sm pl-1 whitespace-nowrap font-medium">💖 Dost ka Naam:</span>
+            <input id="friendNameInput" type="text" maxlength="28" placeholder="Apne dost ka naam likhein..." value="Mere Pyare Dost"
+              class="w-full bg-red-950/80 border border-amber-400/40 rounded-xl px-3 py-1.5 text-xs sm:text-sm text-amber-100 placeholder-amber-300/40 focus:outline-none focus:border-amber-300" />
+          </div>
+          <button id="saveFriendNameBtn" type="button" class="px-4 py-1.5 rounded-xl bg-gradient-to-r from-yellow-400 via-amber-500 to-orange-500 text-red-950 font-bold text-xs sm:text-sm hover:brightness-110 active:scale-95 transition whitespace-nowrap shadow-md">
+            Update ✨
+          </button>
+        </div>
+      </div>
+
+      <!-- Hero Grid: 2 Photos side-by-side on mobile + Welcome Quote Card -->
+      <div class="grid grid-cols-2 lg:grid-cols-12 gap-3 sm:gap-6 items-center mb-6 sm:mb-9 stagger-2">
+        <!-- Left Photo Card: Festive Wall Diyas Photo -->
+        <div class="col-span-1 lg:col-span-4 flex justify-center">
+          <div class="glass-card gold-border-glow rounded-2xl sm:rounded-3xl p-2 sm:p-3.5 max-w-xs w-full float-slow cursor-pointer group" data-lightbox-index="2">
+            <div class="relative rounded-xl sm:rounded-2xl overflow-hidden aspect-[3/4] bg-red-950">
+              <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-photo-id="2"
+                   alt="Diwali Festive Look with Wall Diyas"
+                   class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/15 to-transparent"></div>
+              <div class="absolute bottom-2 left-2 right-2 text-left">
+                <span class="inline-block px-2 py-0.5 rounded-full text-[10px] sm:text-[11px] bg-amber-400 text-red-950 font-bold mb-0.5">🪔 Diwali Look</span>
+                <p class="text-[11px] sm:text-xs text-amber-100 leading-tight line-clamp-2">दीयों से भी ज़्यादा रौशन तुम्हारी ये सादगी और मुस्कान!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Photo Card on Mobile / Right on Desktop: Festive Scrapbook Collage -->
+        <div class="col-span-1 lg:col-span-4 lg:order-3 flex justify-center">
+          <div class="glass-card gold-border-glow rounded-2xl sm:rounded-3xl p-2 sm:p-3.5 max-w-xs w-full float-delayed cursor-pointer group" data-lightbox-index="8">
+            <div class="relative rounded-xl sm:rounded-2xl overflow-hidden aspect-[3/4] bg-red-950">
+              <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-photo-id="8"
+                   alt="Festive Collage Memories"
+                   class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/15 to-transparent"></div>
+              <div class="absolute bottom-2 left-2 right-2 text-left">
+                <span class="inline-block px-2 py-0.5 rounded-full text-[10px] sm:text-[11px] bg-orange-500 text-white font-bold mb-0.5">✨ Khaas Yaadein</span>
+                <p class="text-[11px] sm:text-xs text-amber-100 leading-tight line-clamp-2">हर फ़्रेम में छुपी है हँसी, हर तस्वीर कहती है दोस्ती की कहानी।</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Center Heartfelt Welcome Card (Full width on mobile below 2 photos, center on desktop) -->
+        <div class="col-span-2 lg:col-span-4 lg:order-2 glass-card gold-border-glow rounded-2xl sm:rounded-3xl p-4 sm:p-6 text-center relative overflow-hidden">
+          <div class="text-3xl sm:text-4xl mb-2">🪔🌺🎇</div>
+          <h2 class="font-royal text-lg sm:text-2xl text-amber-300 font-bold mb-2">
+            "Dosti Ek Roshan Diya Hai..."
+          </h2>
+          <p class="text-amber-100/95 text-xs sm:text-base leading-relaxed italic mb-3">
+            "जैसे दिवाली का एक दीया घने अंधेरे को दूर कर देता है, वैसे ही <span class="friend-name-display font-semibold text-amber-300">Mere Pyare Dost</span>, तुम्हारी दोस्ती मेरी ज़िंदगी के हर पल को खुशियों और उजाले से भर देती है।"
+          </p>
+          <div class="border-t border-amber-500/30 pt-3 mt-2 text-xs text-amber-200/90 space-y-1 text-left sm:text-center px-2">
+            <p>🌟 <strong>Page 2:</strong> दिल छू लेने वाली दोस्ती शायरी</p>
+            <p>📸 <strong>Page 3:</strong> तुम्हारी सभी 9 खूबसूरत तस्वीरों की गैलरी</p>
+            <p>💌 <strong>Page 4 & 5:</strong> दिवाली का खास ख़त, मिठाई और आकाश कंदील</p>
+          </div>
+          <div class="mt-4 flex justify-center">
+            <button type="button" data-goto="2" class="goto-btn btn-festive-pulse w-full sm:w-auto px-6 py-2.5 rounded-full bg-gradient-to-r from-yellow-400 via-amber-500 to-orange-500 text-red-950 font-extrabold text-xs sm:text-sm shadow-lg hover:scale-105 active:scale-95 transition">
+              Agla Page: Dosti Shayari →
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Interactive Section: Light the 5 Diyas of Friendship -->
+      <div class="glass-card gold-border-glow rounded-2xl sm:rounded-3xl p-4 sm:p-7 text-center stagger-3">
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-2.5 mb-4">
+          <div class="text-center sm:text-left">
+            <h3 class="font-royal text-base sm:text-2xl text-amber-300 font-bold">
+              🪔 Dosti Ke 5 Diye Jalayein (Touch Each Diya)
+            </h3>
+            <p class="text-xs sm:text-sm text-amber-200/80">
+              हर दीये को छूकर जलाओ और अपने दोस्त के लिए एक खास दिवाली दुआ खोलो!
+            </p>
+          </div>
+          <div class="flex items-center gap-2">
+            <span id="diyaCountBadge" class="px-3 py-1 rounded-full bg-amber-500/20 border border-amber-400/50 text-amber-300 text-xs font-bold">
+              Lit: 1 / 5 Diyas
+            </span>
+            <button id="lightAllDiyasBtn" type="button" class="px-3.5 py-1.5 rounded-full bg-gradient-to-r from-yellow-400 to-orange-500 text-red-950 font-bold text-xs hover:brightness-110 active:scale-95 transition shadow">
+              Saare Diye Jalao ✨
+            </button>
+          </div>
+        </div>
+
+        <div id="diyaCeremonyGrid" class="grid grid-cols-2 sm:grid-cols-5 gap-2.5 sm:gap-4">
+          <!-- Populated dynamically by JS -->
+        </div>
+
+        <div id="diyaBlessingBanner" class="mt-4 p-3 rounded-2xl bg-gradient-to-r from-amber-500/20 via-orange-600/25 to-amber-500/20 border border-amber-400/50 text-amber-100 text-xs sm:text-sm font-medium transition-all">
+          ✨ पहला दीया जल चुका है: "हमारी दोस्ती हमेशा यूँ ही चमकती रहे!" बाक़ी दीयों पर क्लिक करें।
+        </div>
+      </div>
+
+      <!-- Sequential Next Page Banner at Bottom of Page 1 -->
+      <div class="mt-6 text-center stagger-4">
+        <button type="button" data-goto="2" class="goto-btn btn-festive-pulse inline-flex items-center justify-center gap-2 w-full sm:w-auto px-8 py-3.5 rounded-2xl bg-gradient-to-r from-yellow-400 via-amber-500 to-orange-600 text-red-950 font-extrabold text-sm sm:text-base shadow-xl hover:scale-105 active:scale-95 transition">
+          <span>✨ Agla Page (2/5): Dosti Ki Shayari Padhein</span>
+          <span>➔</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         PAGE 2: DOSTI KI ROSHNI (SHAYARI & QUOTES)
+         ========================================== -->
+    <section id="page-2" class="page-section" aria-label="Page 2: Dosti Shayari and Quotes">
+      <div class="text-center mb-6 sm:mb-8 stagger-1">
+        <div class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-amber-500/20 border border-amber-400/50 text-amber-300 text-xs sm:text-sm font-semibold mb-2.5">
+          <span>✨ पेज 2 / 5 • दिल से निकले अल्फ़ाज़ दोस्त के नाम ✨</span>
+        </div>
+        <h2 class="font-royal text-2xl sm:text-4xl md:text-5xl font-bold gold-gradient-text mb-2">
+          Dosti Ki Shayari & Meethe Bol
+        </h2>
+        <p class="max-w-2xl mx-auto text-amber-100/85 text-xs sm:text-base px-2">
+          कुछ रिश्ते सिर्फ़ नाम के नहीं होते, वो ज़िंदगी की सबसे खूबसूरत रौशनी होते हैं। <span class="friend-name-display font-semibold text-amber-300">Mere Pyare Dost</span>, ये पंक्तियाँ सिर्फ़ तुम्हारे लिए:
+        </p>
+      </div>
+
+      <!-- 4 Featured Photo + Shayari Cards (Mobile-Friendly Horizontal/Stacked Layout) -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 mb-7 stagger-2">
+        <!-- Shayari Card 1 -->
+        <div class="glass-card gold-border-glow rounded-2xl sm:rounded-3xl p-4 sm:p-5 flex flex-row gap-3.5 sm:gap-5 items-center">
+          <div class="w-28 sm:w-36 aspect-[3/4] shrink-0 rounded-xl sm:rounded-2xl overflow-hidden border-2 border-amber-400/60 cursor-pointer group shadow-md" data-lightbox-index="0">
+            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-photo-id="0"
+                 alt="Friend Outdoor Portrait"
+                 class="w-full h-full object-cover group-hover:scale-110 transition duration-500" />
+          </div>
+          <div class="flex-1 text-left">
+            <span class="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-amber-400 block mb-1">🌸 सादगी और मुस्कान</span>
+            <p class="text-amber-50 text-xs sm:text-base leading-relaxed italic mb-3" id="shayari-text-1">
+              "दियों की कतार से सजी है ये रात,
+              पर सबसे हसीन है मेरे दोस्त तेरा साथ।
+              तेरी एक मुस्कान से रोशन है जहाँ मेरा,
+              रब करे खुशियों से भरी रहे हर सुबह-ओ-शाम तेरी!"
+            </p>
+            <div class="flex flex-wrap items-center gap-2">
+              <button type="button" data-copy-target="shayari-text-1" class="copy-shayari-btn px-2.5 sm:px-3 py-1 rounded-xl bg-amber-500/25 hover:bg-amber-500/40 border border-amber-400/50 text-amber-200 text-[11px] sm:text-xs font-semibold transition">
+                📋 Copy Shayari
+              </button>
+              <button type="button" data-like-id="s1" class="like-btn px-2.5 sm:px-3 py-1 rounded-xl bg-red-600/30 hover:bg-red-600/50 border border-red-400/50 text-amber-100 text-[11px] sm:text-xs font-semibold transition">
+                ❤️ <span class="like-count">24</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Shayari Card 2 -->
+        <div class="glass-card gold-border-glow rounded-2xl sm:rounded-3xl p-4 sm:p-5 flex flex-row gap-3.5 sm:gap-5 items-center">
+          <div class="w-28 sm:w-36 aspect-[3/4] shrink-0 rounded-xl sm:rounded-2xl overflow-hidden border-2 border-amber-400/60 cursor-pointer group shadow-md" data-lightbox-index="3">
+            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-photo-id="3"
+                 alt="Friend Turquoise Floral Portrait"
+                 class="w-full h-full object-cover group-hover:scale-110 transition duration-500" />
+          </div>
+          <div class="flex-1 text-left">
+            <span class="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-amber-400 block mb-1">🪔 असली खज़ाना</span>
+            <p class="text-amber-50 text-xs sm:text-base leading-relaxed italic mb-3" id="shayari-text-2">
+              "धनतेरस पर लोग सोना-चाँदी खरीदते हैं,
+              पर मेरी किस्मत देखो—मेरे पास तुम जैसा अनमोल दोस्त पहले से है!
+              ना दौलत चाहिए, ना कोई बड़ा इनाम,
+              बस हर दिवाली रहे हमारी दोस्ती के नाम।"
+            </p>
+            <div class="flex flex-wrap items-center gap-2">
+              <button type="button" data-copy-target="shayari-text-2" class="copy-shayari-btn px-2.5 sm:px-3 py-1 rounded-xl bg-amber-500/25 hover:bg-amber-500/40 border border-amber-400/50 text-amber-200 text-[11px] sm:text-xs font-semibold transition">
+                📋 Copy Shayari
+              </button>
+              <button type="button" data-like-id="s2" class="like-btn px-2.5 sm:px-3 py-1 rounded-xl bg-red-600/30 hover:bg-red-600/50 border border-red-400/50 text-amber-100 text-[11px] sm:text-xs font-semibold transition">
+                ❤️ <span class="like-count">31</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Shayari Card 3 -->
+        <div class="glass-card gold-border-glow rounded-2xl sm:rounded-3xl p-4 sm:p-5 flex flex-row gap-3.5 sm:gap-5 items-center">
+          <div class="w-28 sm:w-36 aspect-[3/4] shrink-0 rounded-xl sm:rounded-2xl overflow-hidden border-2 border-amber-400/60 cursor-pointer group shadow-md" data-lightbox-index="1">
+            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-photo-id="1"
+                 alt="Friend Cute Bow Filter"
+                 class="w-full h-full object-cover group-hover:scale-110 transition duration-500" />
+          </div>
+          <div class="flex-1 text-left">
+            <span class="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-amber-400 block mb-1">🎀 शरारत और अपनापन</span>
+            <p class="text-amber-50 text-xs sm:text-base leading-relaxed italic mb-3" id="shayari-text-3">
+              "फुलझड़ी सी हँसी तेरी, पटाखों सा तेरा अंदाज़,
+              हर मस्ती, हर पागलपन में तू ही है मेरा हमराज़।
+              बिना कहे जो समझ ले दिल की हर एक बात,
+              भगवान सलामत रखे हमेशा हमारी ये मुलाक़ात!"
+            </p>
+            <div class="flex flex-wrap items-center gap-2">
+              <button type="button" data-copy-target="shayari-text-3" class="copy-shayari-btn px-2.5 sm:px-3 py-1 rounded-xl bg-amber-500/25 hover:bg-amber-500/40 border border-amber-400/50 text-amber-200 text-[11px] sm:text-xs font-semibold transition">
+                📋 Copy Shayari
+              </button>
+              <button type="button" data-like-id="s3" class="like-btn px-2.5 sm:px-3 py-1 rounded-xl bg-red-600/30 hover:bg-red-600/50 border border-red-400/50 text-amber-100 text-[11px] sm:text-xs font-semibold transition">
+                ❤️ <span class="like-count">19</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Shayari Card 4 -->
+        <div class="glass-card gold-border-glow rounded-2xl sm:rounded-3xl p-4 sm:p-5 flex flex-row gap-3.5 sm:gap-5 items-center">
+          <div class="w-28 sm:w-36 aspect-[3/4] shrink-0 rounded-xl sm:rounded-2xl overflow-hidden border-2 border-amber-400/60 cursor-pointer group shadow-md" data-lightbox-index="4">
+            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-photo-id="4"
+                 alt="Friend Heart Filter Smile"
+                 class="w-full h-full object-cover group-hover:scale-110 transition duration-500" />
+          </div>
+          <div class="flex-1 text-left">
+            <span class="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-amber-400 block mb-1">💫 हर दुआ तेरे नाम</span>
+            <p class="text-amber-50 text-xs sm:text-base leading-relaxed italic mb-3" id="shayari-text-4">
+              "रंगोली के रंगों सी रंगीन हो ज़िंदगी तुम्हारी,
+              हर कदम पर मिले कामयाबी और खुशियाँ सारी।
+              जब भी मुड़कर देखोगे किसी मोड़ पर ऐ दोस्त,
+              सबसे पहले पाओगे साथ खड़े होने की दुआ हमारी!"
+            </p>
+            <div class="flex flex-wrap items-center gap-2">
+              <button type="button" data-copy-target="shayari-text-4" class="copy-shayari-btn px-2.5 sm:px-3 py-1 rounded-xl bg-amber-500/25 hover:bg-amber-500/40 border border-amber-400/50 text-amber-200 text-[11px] sm:text-xs font-semibold transition">
+                📋 Copy Shayari
+              </button>
+              <button type="button" data-like-id="s4" class="like-btn px-2.5 sm:px-3 py-1 rounded-xl bg-red-600/30 hover:bg-red-600/50 border border-red-400/50 text-amber-100 text-[11px] sm:text-xs font-semibold transition">
+                ❤️ <span class="like-count">28</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Interactive Friendship Promises Strip -->
+      <div class="glass-card gold-border-glow rounded-2xl sm:rounded-3xl p-4 sm:p-6 text-center stagger-3">
+        <h3 class="font-royal text-lg sm:text-xl text-amber-300 font-bold mb-3">✨ Dosti Ke 4 Pakke Diwali Vaade ✨</h3>
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-3 text-left">
+          <div class="p-3 rounded-xl bg-red-950/70 border border-amber-400/35">
+            <div class="text-xs sm:text-base font-bold text-amber-300 mb-1">🤝 1. Hamesha Saath</div>
+            <p class="text-[11px] sm:text-xs text-amber-100/85">चाहे कितनी भी बिज़ी लाइफ हो, एक कॉल पर हमेशा हाज़िर रहेंगे।</p>
+          </div>
+          <div class="p-3 rounded-xl bg-red-950/70 border border-amber-400/35">
+            <div class="text-xs sm:text-base font-bold text-amber-300 mb-1">😊 2. Muskaan Guarantee</div>
+            <p class="text-[11px] sm:text-xs text-amber-100/85">जब भी उदास होगे, बिना सिर-पैर की बातों से हँसाने का वादा।</p>
+          </div>
+          <div class="p-3 rounded-xl bg-red-950/70 border border-amber-400/35">
+            <div class="text-xs sm:text-base font-bold text-amber-300 mb-1">🔒 3. Secret Keeper</div>
+            <p class="text-[11px] sm:text-xs text-amber-100/85">हमारी सारी गॉसिप और राज़ हमेशा तिजोरी से भी ज़्यादा सुरक्षित रहेंगे।</p>
+          </div>
+          <div class="p-3 rounded-xl bg-red-950/70 border border-amber-400/35">
+            <div class="text-xs sm:text-base font-bold text-amber-300 mb-1">🍬 4. Extra Mithai</div>
+            <p class="text-[11px] sm:text-xs text-amber-100/85">हर त्योहार की सबसे अच्छी मिठाई और खुशियाँ सबसे पहले तुम्हारे साथ!</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sequential Next Page CTA -->
+      <div class="mt-6 text-center stagger-4">
+        <button type="button" data-goto="3" class="goto-btn btn-festive-pulse inline-flex items-center justify-center gap-2 w-full sm:w-auto px-8 py-3.5 rounded-2xl bg-gradient-to-r from-yellow-400 via-amber-500 to-orange-600 text-red-950 font-extrabold text-sm sm:text-base shadow-xl hover:scale-105 active:scale-95 transition">
+          <span>📸 Agla Page (3/5): Sabhi 9 Photos Ki Album Dekhein</span>
+          <span>➔</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         PAGE 3: YAADON KA SAFAR (ALL 9 IMAGES GALLERY)
+         ========================================== -->
+    <section id="page-3" class="page-section" aria-label="Page 3: All 9 Memories Photo Gallery">
+      <div class="text-center mb-5 stagger-1">
+        <div class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-amber-500/20 border border-amber-400/50 text-amber-300 text-xs sm:text-sm font-semibold mb-2.5">
+          <span>📸 पेज 3 / 5 • सभी 9 खूबसूरत तस्वीरों की एल्बम 📸</span>
+        </div>
+        <h2 class="font-royal text-2xl sm:text-4xl md:text-5xl font-bold gold-gradient-text mb-2">
+          Yaadon Ka Safar (9 Precious Frames)
+        </h2>
+        <p class="max-w-2xl mx-auto text-amber-100/85 text-xs sm:text-base px-2">
+          हर तस्वीर में एक अलग अंदाज़ और वही प्यारी सी मुस्कान! किसी भी फोटो को छूकर उसे फुल-स्क्रीन Lightbox में देखें।
+        </p>
+      </div>
+
+      <!-- Filter Bar + Slideshow Button -->
+      <div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-2.5 mb-5 glass-card gold-border-glow rounded-2xl p-2.5 sm:p-3 stagger-2">
+        <div class="flex items-center gap-1.5 overflow-x-auto no-scrollbar py-0.5">
+          <button type="button" data-filter="all" class="gallery-filter-btn px-3 py-1.5 rounded-xl text-xs font-bold bg-amber-400 text-red-950 whitespace-nowrap transition">
+            All 9 Photos (9)
+          </button>
+          <button type="button" data-filter="festive" class="gallery-filter-btn px-3 py-1.5 rounded-xl text-xs font-medium text-amber-200 hover:bg-amber-500/20 whitespace-nowrap transition">
+            🪔 Festive & Ethnic (3)
+          </button>
+          <button type="button" data-filter="cute" class="gallery-filter-btn px-3 py-1.5 rounded-xl text-xs font-medium text-amber-200 hover:bg-amber-500/20 whitespace-nowrap transition">
+            💖 Cute Filters & Smiles (3)
+          </button>
+          <button type="button" data-filter="collage" class="gallery-filter-btn px-3 py-1.5 rounded-xl text-xs font-medium text-amber-200 hover:bg-amber-500/20 whitespace-nowrap transition">
+            🖼️ Polaroid Collages (3)
+          </button>
+        </div>
+        <button id="startSlideshowBtn" type="button" class="px-4 py-2 rounded-xl bg-gradient-to-r from-orange-500 via-red-600 to-amber-500 text-white font-bold text-xs sm:text-sm shadow-md hover:brightness-110 active:scale-95 transition text-center">
+          ▶ Auto Slideshow dekhein
+        </button>
+      </div>
+
+      <!-- 9-Photo Polaroid Grid (2 columns on mobile, 3 on desktop!) -->
+      <div id="photoGalleryGrid" class="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6 stagger-3">
+        <!-- Populated by JS with all 9 uploaded photos, captions, badges & lightbox triggers -->
+      </div>
+
+      <!-- Sequential Next Page CTA -->
+      <div class="mt-6 text-center stagger-4">
+        <button type="button" data-goto="4" class="goto-btn btn-festive-pulse inline-flex items-center justify-center gap-2 w-full sm:w-auto px-8 py-3.5 rounded-2xl bg-gradient-to-r from-yellow-400 via-amber-500 to-orange-600 text-red-950 font-extrabold text-sm sm:text-base shadow-xl hover:scale-105 active:scale-95 transition">
+          <span>💌 Agla Page (4/5): Dost Ke Naam Khaas Khat Kholo</span>
+          <span>➔</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         PAGE 4: KHAAS KHAT & COMPLIMENT BOX
+         ========================================== -->
+    <section id="page-4" class="page-section" aria-label="Page 4: Special Friendship Letter">
+      <div class="text-center mb-6 sm:mb-8 stagger-1">
+        <div class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-amber-500/20 border border-amber-400/50 text-amber-300 text-xs sm:text-sm font-semibold mb-2.5">
+          <span>💌 पेज 4 / 5 • एक ख़त मेरे सबसे अच्छे दोस्त के नाम 💌</span>
+        </div>
+        <h2 class="font-royal text-2xl sm:text-4xl md:text-5xl font-bold gold-gradient-text mb-2">
+          Khaas Diwali Khat & Compliment Pitara
+        </h2>
+        <p class="max-w-2xl mx-auto text-amber-100/85 text-xs sm:text-base px-2">
+          कुछ बातें जो रोज़ नहीं कह पाते, आज दिवाली के इस पावन मौके पर दिल से लिख दी हैं।
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-6 items-start stagger-2">
+        <!-- Left Column: Royal Friendship Letter (7 cols) -->
+        <div class="lg:col-span-7 glass-card gold-border-glow rounded-2xl sm:rounded-3xl p-4 sm:p-8 relative overflow-hidden">
+          <div class="flex flex-wrap items-center justify-between gap-2 border-b border-amber-500/35 pb-3.5 mb-4">
+            <div class="flex items-center gap-2.5">
+              <span class="text-2xl sm:text-3xl">📜</span>
+              <div>
+                <h3 class="font-royal text-base sm:text-2xl text-amber-300 font-bold">
+                  Pyare Dost <span class="friend-name-display">Mere Pyare Dost</span> Ke Naam
+                </h3>
+                <p class="text-[11px] sm:text-xs text-amber-200/75">Diwali Special Friendship Scroll • Dil Ki Baat</p>
+              </div>
+            </div>
+            <button id="toggleLetterLangBtn" type="button" class="px-3 py-1.5 rounded-xl bg-amber-500/25 hover:bg-amber-500/40 border border-amber-400/50 text-amber-200 text-xs font-semibold transition">
+              🔄 Hinglish / Hindi
+            </button>
+          </div>
+
+          <!-- Letter Body (Hindi + Hinglish toggleable) -->
+          <div id="letterContentHindi" class="space-y-3.5 text-amber-50/95 text-xs sm:text-base leading-relaxed">
+            <p>
+              <strong>प्यारे दोस्त <span class="friend-name-display text-amber-300">Mere Pyare Dost</span>,</strong>
+            </p>
+            <p>
+              ज़िंदगी में बहुत से लोग मिलते हैं, पर कुछ ही लोग ऐसे होते हैं जो बिना किसी शर्त के दिल के इतने करीब आ जाते हैं। तुम उन्हीं सबसे खास इंसानों में से एक हो! तुम्हारी ये प्यारी सी हँसी, तुम्हारा हर छोटी बात में खुश हो जाना, और मुश्किल वक्त में बिना कहे साथ निभाना—यही तुम्हारी सबसे बड़ी खूबी है।
+            </p>
+            <p>
+              जब भी मैं तुम्हारी इन तस्वीरों को देखता हूँ, तो लगता है कि भगवान ने तुम्हें कितनी सादगी और रौशनी से नवाज़ा है। जैसे दिवाली के दीये हर कोने से अंधेरा मिटा देते हैं, वैसे ही तुम्हारी मौजूदगी हर माहौल को खुशनुमा बना देती है।
+            </p>
+            <p>
+              इस दिवाली मेरी भगवान से बस यही प्रार्थना है कि तुम्हारी आँखों की चमक और चेहरे की ये प्यारी सी मुस्कान कभी कम न हो। तुम्हारे सारे सपने पूरे हों, और हमारी ये दोस्ती हर साल और भी गहरी और पक्की होती जाए!
+            </p>
+            <p class="pt-2 text-amber-300 font-bold italic">
+              — तुम्हारा हमेशा साथ निभाने वाला दोस्त 💖🪔
+            </p>
+          </div>
+
+          <div id="letterContentHinglish" class="hidden space-y-3.5 text-amber-50/95 text-xs sm:text-base leading-relaxed">
+            <p>
+              <strong>Dearest <span class="friend-name-display text-amber-300">Mere Pyare Dost</span>,</strong>
+            </p>
+            <p>
+              Zindagi mein bahut log milte hain, par kuch hi dost aise hote hain jo bina kisi shart ke dil ke itne kareeb ban jaate hain. Tum unhi sabse special logon mein se ek ho! Tumhari yeh cute si smile, har chhoti si baat mein khushiyan dhoondh lena, aur hamesha sachcha saath nibhana—yehi tumhe sabse alag aur best banata hai.
+            </p>
+            <p>
+              In saari photos mein tumhari jo saadgi aur positivity dikhti hai, woh sach mein kisi Diwali ki roshni se kam nahi hai. Jaise ek chhota sa diya poore ghar ko roshan kar deta hai, waise hi tumhari dosti meri life ko hamesha bright rakhti hai.
+            </p>
+            <p>
+              Is Diwali meri rab se bas yehi dua hai ki tumhare chehre ki yeh muskaan hamesha aisi hi bani rahe, tumhe life mein har woh khushi aur success mile jiski tum haqdaar ho, aur humari dosti hamesha aise hi chamakti rahe!
+            </p>
+            <p class="pt-2 text-amber-300 font-bold italic">
+              — Hamesha Tumhara Saccha Dost 💖🪔
+            </p>
+          </div>
+
+          <!-- Mini Polaroid Strip inside Letter -->
+          <div class="mt-5 pt-4 border-t border-amber-500/30 grid grid-cols-3 gap-2.5 sm:gap-3">
+            <div class="rounded-xl overflow-hidden border-2 border-amber-400/50 aspect-square cursor-pointer shadow" data-lightbox-index="6">
+              <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-photo-id="6" alt="Collage 3" class="w-full h-full object-cover hover:scale-105 transition" />
+            </div>
+            <div class="rounded-xl overflow-hidden border-2 border-amber-400/50 aspect-square cursor-pointer shadow" data-lightbox-index="7">
+              <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-photo-id="7" alt="Polaroid Frame" class="w-full h-full object-cover hover:scale-105 transition" />
+            </div>
+            <div class="rounded-xl overflow-hidden border-2 border-amber-400/50 aspect-square cursor-pointer shadow" data-lightbox-index="5">
+              <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-photo-id="5" alt="Heart Filter Pose" class="w-full h-full object-cover hover:scale-105 transition" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Interactive Compliment Jar & Friendship Meter (5 cols) -->
+        <div class="lg:col-span-5 space-y-5">
+          <!-- Compliment Generator Card -->
+          <div class="glass-card gold-border-glow rounded-2xl sm:rounded-3xl p-5 sm:p-6 text-center">
+            <div class="w-12 h-12 sm:w-14 sm:h-14 mx-auto mb-2.5 rounded-2xl bg-gradient-to-br from-yellow-400 via-orange-500 to-red-600 flex items-center justify-center text-2xl shadow-lg border border-yellow-200">
+              🎁
+            </div>
+            <h3 class="font-royal text-lg sm:text-xl text-amber-300 font-bold mb-1">
+              Dosti Ka Compliment Pitara
+            </h3>
+            <p class="text-xs text-amber-200/80 mb-3.5">
+              नीचे बटन दबाओ और जानो कि तुम एक दोस्त के रूप में इतने ख़ास क्यों हो!
+            </p>
+            <div id="complimentDisplayBox" class="min-h-[95px] flex items-center justify-center p-3.5 rounded-2xl bg-red-950/80 border border-amber-400/50 text-amber-100 text-xs sm:text-base italic mb-4 shadow-inner">
+              "तुम्हारी मुस्कान इतनी सच्ची है कि कोई भी परेशान इंसान तुम्हें देखकर अपनी टेंशन भूल जाए! 🌸"
+            </div>
+            <button id="nextComplimentBtn" type="button" class="w-full py-2.5 px-4 rounded-xl bg-gradient-to-r from-yellow-400 via-amber-500 to-orange-500 text-red-950 font-extrabold text-xs sm:text-sm shadow-lg hover:brightness-110 active:scale-95 transition">
+              ✨ Naya Compliment Kholo (1 / 8)
+            </button>
+          </div>
+
+          <!-- Best Friend Certificate Card -->
+          <div class="glass-card gold-border-glow rounded-2xl sm:rounded-3xl p-5 sm:p-6 text-center relative overflow-hidden">
+            <span class="px-3 py-0.5 rounded-full bg-amber-400/25 text-amber-300 text-[10px] sm:text-[11px] font-bold uppercase tracking-widest border border-amber-400/40">
+              🏆 Official Diwali Award 2026
+            </span>
+            <h4 class="font-royal text-lg sm:text-xl text-amber-200 font-bold mt-2 mb-1">
+              World's Best & Cutest Dost Award
+            </h4>
+            <p class="text-xs text-amber-100/85 mb-4">
+              यह सम्मान पूरे दिल से <strong class="friend-name-display text-amber-300">Mere Pyare Dost</strong> को उनकी बेमिसाल दोस्ती, प्यारी सी मुस्कान और हर पल खुशियां बांटने के लिए दिया जाता है!
+            </p>
+            <div class="grid grid-cols-3 gap-2 text-center text-xs">
+              <div class="p-2 rounded-xl bg-red-950/80 border border-amber-500/40">
+                <div class="text-amber-400 font-bold text-sm sm:text-base">100%</div>
+                <div class="text-amber-200/80 text-[10px] sm:text-[11px]">Cute Smile</div>
+              </div>
+              <div class="p-2 rounded-xl bg-red-950/80 border border-amber-500/40">
+                <div class="text-amber-400 font-bold text-sm sm:text-base">∞</div>
+                <div class="text-amber-200/80 text-[10px] sm:text-[11px]">Pakki Dosti</div>
+              </div>
+              <div class="p-2 rounded-xl bg-red-950/80 border border-amber-500/40">
+                <div class="text-amber-400 font-bold text-sm sm:text-base">24×7</div>
+                <div class="text-amber-200/80 text-[10px] sm:text-[11px]">Good Vibes</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sequential Next Page CTA -->
+      <div class="mt-6 text-center stagger-3">
+        <button type="button" data-goto="5" class="goto-btn btn-festive-pulse inline-flex items-center justify-center gap-2 w-full sm:w-auto px-8 py-3.5 rounded-2xl bg-gradient-to-r from-yellow-400 via-amber-500 to-orange-600 text-red-950 font-extrabold text-sm sm:text-base shadow-xl hover:scale-105 active:scale-95 transition">
+          <span>🎆 Agla Page (5/5): Diwali Mithai & Aakash Kandil Utsav</span>
+          <span>➔</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         PAGE 5: DIWALI CELEBRATION ZONE (SWEETS, SKY LANTERNS & CRACKERS)
+         ========================================== -->
+    <section id="page-5" class="page-section" aria-label="Page 5: Interactive Diwali Celebration">
+      <div class="text-center mb-6 sm:mb-8 stagger-1">
+        <div class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-amber-500/20 border border-amber-400/50 text-amber-300 text-xs sm:text-sm font-semibold mb-2.5">
+          <span>🎆 पेज 5 / 5 • मुँह मीठा करो, पटाखे फोड़ो और कंदील उड़ाओ 🎆</span>
+        </div>
+        <h2 class="font-royal text-2xl sm:text-4xl md:text-5xl font-bold gold-gradient-text mb-2">
+          Diwali Utsav, Mithai & Sky Wishes
+        </h2>
+        <p class="max-w-2xl mx-auto text-amber-100/85 text-xs sm:text-base px-2">
+          दिवाली बिना मिठाई और आतिशबाज़ी के अधूरी है! नीचे मिठाई के डिब्बे खोलो, अनार-चकरी जलाओ और अपने दोस्त के लिए आसमान में दुआओं का कंदील उड़ाओ।
+        </p>
+      </div>
+
+      <!-- Virtual Mithai Box Grid (2 cols on mobile, 4 on desktop) -->
+      <div class="glass-card gold-border-glow rounded-2xl sm:rounded-3xl p-4 sm:p-7 mb-6 sm:mb-8 stagger-2">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
+          <div>
+            <h3 class="font-royal text-lg sm:text-2xl text-amber-300 font-bold">
+              🍬 Dosti Ka Shahi Mithai Box (Touch to Taste!)
+            </h3>
+            <p class="text-xs sm:text-sm text-amber-200/80">
+              हर मिठाई के साथ छुपा है एक मीठा सा दिवाली मैसेज!
+            </p>
+          </div>
+          <span id="sweetStatusText" class="text-xs sm:text-sm text-amber-300 font-bold bg-red-950/80 px-3 py-1.5 rounded-xl border border-amber-400/40">
+            Apni pasandida mithai chuno 👇
+          </span>
+        </div>
+
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-4">
+          <button type="button" data-sweet="kaju" class="sweet-card-btn text-left p-3 sm:p-4 rounded-2xl bg-red-950/75 hover:bg-red-900/80 border border-amber-400/45 active:scale-95 transition group">
+            <div class="text-2xl sm:text-3xl mb-1.5 group-hover:scale-110 transition-transform inline-block">💎</div>
+            <h4 class="font-bold text-amber-300 text-xs sm:text-base">Shahi Kaju Katli</h4>
+            <p class="text-[11px] sm:text-xs text-amber-100/85 mt-1">चाँदी के वर्क जैसी चमकती रहे तुम्हारी किस्मत और हमारी दोस्ती!</p>
+          </button>
+
+          <button type="button" data-sweet="jamun" class="sweet-card-btn text-left p-3 sm:p-4 rounded-2xl bg-red-950/75 hover:bg-red-900/80 border border-amber-400/45 active:scale-95 transition group">
+            <div class="text-2xl sm:text-3xl mb-1.5 group-hover:scale-110 transition-transform inline-block">🍯</div>
+            <h4 class="font-bold text-amber-300 text-xs sm:text-base">Garam Gulab Jamun</h4>
+            <p class="text-[11px] sm:text-xs text-amber-100/85 mt-1">चाशनी की तरह मीठी और नरम रहे तुम्हारी हर बात और हर याद!</p>
+          </button>
+
+          <button type="button" data-sweet="ladoo" class="sweet-card-btn text-left p-3 sm:p-4 rounded-2xl bg-red-950/75 hover:bg-red-900/80 border border-amber-400/45 active:scale-95 transition group">
+            <div class="text-2xl sm:text-3xl mb-1.5 group-hover:scale-110 transition-transform inline-block">🟠</div>
+            <h4 class="font-bold text-amber-300 text-xs sm:text-base">Motichoor Ladoo</h4>
+            <p class="text-[11px] sm:text-xs text-amber-100/85 mt-1">मोतीचूर के हर दाने की तरह खुशियों से भरा रहे आने वाला साल!</p>
+          </button>
+
+          <button type="button" data-sweet="choco" class="sweet-card-btn text-left p-3 sm:p-4 rounded-2xl bg-red-950/75 hover:bg-red-900/80 border border-amber-400/45 active:scale-95 transition group">
+            <div class="text-2xl sm:text-3xl mb-1.5 group-hover:scale-110 transition-transform inline-block">🍫</div>
+            <h4 class="font-bold text-amber-300 text-xs sm:text-base">Dryfruit Choco Box</h4>
+            <p class="text-[11px] sm:text-xs text-amber-100/85 mt-1">थोड़ा मॉडर्न, थोड़ा देसी—बिल्कुल तुम्हारी प्यारी पर्सनालिटी की तरह!</p>
+          </button>
+        </div>
+      </div>
+
+      <!-- Sky Lantern, Rockets & Chakri Fireworks Stage -->
+      <div class="glass-card gold-border-glow rounded-2xl sm:rounded-3xl p-4 sm:p-8 text-center relative overflow-hidden stagger-3">
+        <h3 class="font-royal text-lg sm:text-2xl text-amber-300 font-bold mb-1.5">
+          🏮 Aakash Kandil, Rocket & Chakri Stage
+        </h3>
+        <p class="text-xs sm:text-sm text-amber-100/85 max-w-xl mx-auto mb-4">
+          अपने दोस्त के लिए कोई विश लिखें और "कंदील उड़ाएँ" या "रॉकेट छोड़ें" दबाएँ—आसमान में चमकते कंदील और आतिशबाज़ी का नज़ारा देखें!
+        </p>
+
+        <div class="max-w-xl mx-auto flex flex-col sm:flex-row gap-2 mb-4">
+          <input id="customWishInput" type="text" maxlength="50" value="Happy Diwali Bestie! Hamesha Khush Raho 💖"
+            class="flex-1 bg-red-950/85 border border-amber-400/50 rounded-xl px-3.5 py-2 text-xs sm:text-sm text-amber-100 focus:outline-none focus:border-amber-300" />
+          <div class="flex gap-2">
+            <button id="launchLanternBtn" type="button" class="flex-1 sm:flex-initial px-4 py-2.5 rounded-xl bg-gradient-to-r from-yellow-400 via-amber-500 to-orange-500 text-red-950 font-extrabold text-xs sm:text-sm shadow-lg hover:scale-105 active:scale-95 transition whitespace-nowrap">
+              🏮 Kandil Udayein & Patakhe!
+            </button>
+            <button id="grandFireworksBtn" type="button" class="flex-1 sm:flex-initial px-4 py-2.5 rounded-xl bg-gradient-to-r from-red-600 via-orange-500 to-yellow-400 text-slate-950 font-extrabold text-xs sm:text-sm shadow-lg hover:scale-105 active:scale-95 transition whitespace-nowrap">
+              🚀 5 Rockets फोड़ें!
+            </button>
+          </div>
+        </div>
+
+        <!-- Animated Sky Stage Container -->
+        <div id="lanternSkyStage" class="relative h-64 sm:h-72 rounded-2xl bg-gradient-to-b from-[#0d0106] via-[#2b040c] to-[#4a0810] border-2 border-amber-400/45 overflow-hidden flex flex-col items-center justify-end p-3 sm:p-4 cursor-pointer shadow-inner">
+          <div class="absolute top-2.5 left-3 text-left pointer-events-none z-10">
+            <span class="text-[10px] sm:text-xs text-amber-300/90 block font-medium">✨ आसमान में कहीं भी Touch/Click करके पटाखे फोड़ें!</span>
+            <span id="lanternCounterText" class="text-xs font-bold text-amber-300">Sky Wishes Launched: 3</span>
+          </div>
+
+          <!-- Spinning Ground Chakris in Bottom Corners -->
+          <div class="absolute bottom-3 left-3 w-8 h-8 rounded-full border-2 border-dashed border-amber-300 bg-gradient-to-tr from-red-600 via-orange-400 to-yellow-200 chakri-spin shadow-[0_0_16px_#fbbf24] pointer-events-none"></div>
+          <div class="absolute bottom-3 right-3 w-8 h-8 rounded-full border-2 border-dashed border-amber-300 bg-gradient-to-tr from-red-600 via-orange-400 to-yellow-200 chakri-spin shadow-[0_0_16px_#fbbf24] pointer-events-none"></div>
+
+          <!-- Floating Lanterns Layer -->
+          <div id="floatingLanternsLayer" class="absolute inset-0 pointer-events-none overflow-hidden"></div>
+
+          <!-- Bottom Greeting Pill inside Sky Stage -->
+          <div class="relative z-10 flex items-center gap-2 bg-black/65 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-amber-400/50">
+            <span class="text-sm sm:text-lg">🪔</span>
+            <span class="text-[11px] sm:text-sm text-amber-200 font-medium">
+              Wishing You the Happiest Diwali, <span class="friend-name-display text-amber-300 font-bold">Mere Pyare Dost</span>!
+            </span>
+            <span class="text-sm sm:text-lg">🎇</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Loop Back to Page 1 CTA -->
+      <div class="mt-6 text-center stagger-4">
+        <button type="button" data-goto="1" class="goto-btn inline-flex items-center justify-center gap-2 w-full sm:w-auto px-8 py-3 rounded-2xl bg-red-950/90 border-2 border-amber-400/60 text-amber-200 font-bold text-xs sm:text-sm hover:bg-red-900 transition">
+          <span>🏠 Wapas Page 1 Par Jayein (Start Again)</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- Desktop / Tablet Bottom Page Navigation Bar -->
+    <div class="mt-7 glass-card gold-border-glow rounded-2xl p-3.5 hidden sm:flex items-center justify-between gap-4">
+      <button id="prevPageBtn" type="button" class="px-5 py-2.5 rounded-xl bg-red-950/80 hover:bg-red-900 border border-amber-400/45 text-amber-200 text-sm font-semibold transition disabled:opacity-40 disabled:pointer-events-none">
+        ← Pichhla Page
+      </button>
+      <div class="text-center">
+        <span id="bottomPageIndicator" class="text-sm font-bold text-amber-300 block">Page 1 of 5 • Shubh Deepawali</span>
+        <span class="text-xs text-amber-200/75">Ek ke baad ek page kholne ke liye Agla Page dabayein</span>
+      </div>
+      <button id="nextPageBtn" type="button" class="btn-festive-pulse px-6 py-2.5 rounded-xl bg-gradient-to-r from-yellow-400 via-amber-500 to-orange-500 text-red-950 font-extrabold text-sm hover:brightness-110 transition">
+        Agla Page →
+      </button>
+    </div>
+
+  </main>
+
+  <!-- Sticky Mobile Bottom App Bar (Thumb-Friendly Sequential Page Opener for Mobile!) -->
+  <div class="fixed bottom-0 left-0 right-0 z-40 sm:hidden bg-[#260307]/95 backdrop-blur-xl border-t-2 border-amber-400/50 px-3 py-2 shadow-[0_-8px_25px_rgba(0,0,0,0.7)]">
+    <div class="flex items-center justify-between gap-2 max-w-md mx-auto">
+      <button id="mobilePrevPageBtn" type="button" class="px-3.5 py-2 rounded-xl bg-red-950 border border-amber-400/40 text-amber-200 text-xs font-bold active:scale-95 transition disabled:opacity-35">
+        ← Pichhla
+      </button>
+      <div class="flex flex-col items-center">
+        <div class="flex items-center gap-1.5 mb-0.5" id="mobilePageDots">
+          <span class="w-2.5 h-2.5 rounded-full bg-amber-400"></span>
+          <span class="w-2 h-2 rounded-full bg-amber-400/30"></span>
+          <span class="w-2 h-2 rounded-full bg-amber-400/30"></span>
+          <span class="w-2 h-2 rounded-full bg-amber-400/30"></span>
+          <span class="w-2 h-2 rounded-full bg-amber-400/30"></span>
+        </div>
+        <span id="mobilePageLabel" class="text-[10px] text-amber-200 font-semibold">Page 1 / 5 • Swipe Ya Click</span>
+      </div>
+      <button id="mobileNextPageBtn" type="button" class="btn-festive-pulse px-4 py-2 rounded-xl bg-gradient-to-r from-yellow-400 via-amber-500 to-orange-500 text-red-950 font-extrabold text-xs active:scale-95 transition">
+        Agla Page →
+      </button>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       FULLSCREEN PHOTO LIGHTBOX MODAL
+       ========================================== -->
+  <div id="lightboxModal" class="fixed inset-0 z-50 hidden bg-black/90 backdrop-blur-lg flex items-center justify-center p-3 sm:p-4">
+    <div class="relative max-w-3xl w-full glass-card gold-border-glow rounded-2xl sm:rounded-3xl p-3.5 sm:p-6 overflow-hidden">
+      <div class="flex items-center justify-between mb-2.5">
+        <div>
+          <span id="lightboxBadge" class="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-amber-400 text-red-950">Memory #1</span>
+          <h3 id="lightboxTitle" class="font-royal text-base sm:text-xl text-amber-300 font-bold mt-0.5">Khushiyon Ki Muskaan</h3>
+        </div>
+        <div class="flex items-center gap-1.5">
+          <button id="lightboxSlideshowToggle" type="button" class="px-2.5 py-1.5 rounded-xl bg-amber-500/25 hover:bg-amber-500/40 border border-amber-400/50 text-amber-200 text-xs font-semibold">
+            ▶ Auto Play
+          </button>
+          <button id="closeLightboxBtn" type="button" class="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-red-600/35 hover:bg-red-600/55 border border-red-400/50 text-amber-100 font-bold flex items-center justify-center">
+            ✕
+          </button>
+        </div>
+      </div>
+
+      <div class="relative rounded-xl sm:rounded-2xl overflow-hidden bg-black/70 flex items-center justify-center max-h-[60vh]">
+        <img id="lightboxImage" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-photo-id="0" alt="Memory Fullscreen" class="max-h-[58vh] w-auto object-contain rounded-xl" />
+        <button id="lightboxPrevBtn" type="button" class="absolute left-2 sm:left-3 top-1/2 -translate-y-1/2 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-black/75 hover:bg-amber-500 hover:text-red-950 text-amber-200 border border-amber-400/50 flex items-center justify-center font-bold text-lg transition">
+          ‹
+        </button>
+        <button id="lightboxNextBtn" type="button" class="absolute right-2 sm:right-3 top-1/2 -translate-y-1/2 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-black/75 hover:bg-amber-500 hover:text-red-950 text-amber-200 border border-amber-400/50 flex items-center justify-center font-bold text-lg transition">
+          ›
+        </button>
+      </div>
+
+      <p id="lightboxCaption" class="mt-3 text-center text-amber-100 text-xs sm:text-base italic leading-relaxed px-2"></p>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toastBanner" class="fixed top-16 right-4 z-50 hidden px-4 py-2.5 rounded-2xl bg-gradient-to-r from-yellow-400 via-amber-500 to-orange-500 text-red-950 font-extrabold text-xs sm:text-sm shadow-2xl border border-yellow-200">
+    ✨ Copied to clipboard!
+  </div>
+
+  <script>
+    // ==========================================
+    // 1. ALL 9 UPLOADED PHOTOS DATA & CAPTIONS
+    // ==========================================
+    const PHOTO_MEMORIES = [
+      {
+        id: 0,
+        src: "images/photo1.jpg",
+        title: "Khuli Hawa & Pyari Muskaan",
+        category: "cute",
+        badge: "💖 Heart Filter Glow",
+        rotation: "-1.2deg",
+        caption: "नीले फूलों वाले दुपट्टे और चेहरे पर ये प्यारे से दिल—तुम्हारी सादगी हर मौसम को खूबसूरत बना देती है!"
+      },
+      {
+        id: 1,
+        src: "images/photo2.jpg",
+        title: "Cutest Bow Filter Vibe",
+        category: "cute",
+        badge: "🎀 Cute & Mastikhor",
+        rotation: "1.2deg",
+        caption: "बिना किसी बनावट के भी जो सबसे प्यारी लगे, वो हो तुम मेरे दोस्त! हमेशा ऐसे ही मुस्कुराती रहो।"
+      },
+      {
+        id: 2,
+        src: "images/photo3.jpg",
+        title: "Diwali Diya & Jhumke Wala Andaaz",
+        category: "festive",
+        badge: "🪔 Diwali Queen",
+        rotation: "-1deg",
+        caption: "पीछे दीवार पर सजे दीये और कानों के ये खूबसूरत झुमके—असली दिवाली की रौनक तो तुम्हारे इस रूप में है!"
+      },
+      {
+        id: 3,
+        src: "images/photo4.jpg",
+        title: "Saadgi Mein Bhi Noor",
+        category: "festive",
+        badge: "🌸 Pure Elegance",
+        rotation: "1.1deg",
+        caption: "फ़िरोज़ी कुर्ती और आँखों में सुकून—सच्चे दोस्त की पहचान उसकी सादगी और साफ़ दिल से होती है।"
+      },
+      {
+        id: 4,
+        src: "images/photo5.jpg",
+        title: "Dil Se Dil Tak Ki Dosti",
+        category: "cute",
+        badge: "✨ Golden Heart",
+        rotation: "-1.1deg",
+        caption: "जितने दिल इस फ़िल्टर में दिख रहे हैं, उससे कहीं ज़्यादा दुआएँ आज दिवाली पर तुम्हारे लिए मेरे दिल में हैं!"
+      },
+      {
+        id: 5,
+        src: "images/photo6.jpg",
+        title: "Beparwah & Khushmizaaj",
+        category: "festive",
+        badge: "💫 Effortless Grace",
+        rotation: "1.3deg",
+        caption: "हर पल को खुलकर जीना और अपने दोस्तों की ज़िंदगी में पॉजिटिव वाइब्स भरना कोई तुमसे सीखे!"
+      },
+      {
+        id: 6,
+        src: "images/photo7.jpg",
+        title: "4 Frames, 1 Anmol Dost",
+        category: "collage",
+        badge: "🖼️ Quad Memory Collage",
+        rotation: "-1deg",
+        caption: "चार अलग-अलग पोज़, पर हर तस्वीर में वही सच्चा अपनापन और मासूमियत जो तुम्हें सबसे खास बनाती है।"
+      },
+      {
+        id: 7,
+        src: "images/photo8.jpg",
+        title: "Vintage Polaroid Treasure",
+        category: "collage",
+        badge: "📌 Timeless Frame",
+        rotation: "1deg",
+        caption: "टेप से चिपकी इस पोलरॉइड फोटो की तरह हमारी दोस्ती भी ज़िंदगी की डायरी में हमेशा के लिए पक्की है!"
+      },
+      {
+        id: 8,
+        src: "images/photo9.jpg",
+        title: "Tyohaar & Dosti Scrapbook",
+        category: "collage",
+        badge: "🎇 Festive Scrapbook",
+        rotation: "-1.2deg",
+        caption: "मांग टीका, पारंपरिक सज्जा और दिवाली की जगमगाती लाइट्स—ये कोलाज हमारी दोस्ती की सबसे सुंदर याद है!"
+      }
+    ];
+
+    const DIYA_DATA = [
+      { id: 1, title: "Khushi Ka Diya", blessing: "पहला दीया तुम्हारी मुस्कुराहट के नाम—जो हर उदासी को पल भर में दूर कर देती है!", lit: true },
+      { id: 2, title: "Kamyabi Ka Diya", blessing: "दूसरा दीया तुम्हारे सपनों के नाम—आने वाला साल तुम्हें हर मंज़िल और तरक्की दिलाए!", lit: false },
+      { id: 3, title: "Sehat & Sukoon", blessing: "तीसरा दीया तुम्हारी सेहत और मन की शांति के नाम—तुम हमेशा यूँ ही खिलखिलाती रहो!", lit: false },
+      { id: 4, title: "Parivaar Ki Raunak", blessing: "चौथा दीया तुम्हारे पूरे परिवार की खुशहाली और सुख-समृद्धि के नाम!", lit: false },
+      { id: 5, title: "Atoot Dosti Ka Diya", blessing: "पाँचवाँ दीया हमारी अनमोल दोस्ती के नाम—जो हर दिवाली और भी ज़्यादा गहरी और रोशन होगी!", lit: false }
+    ];
+
+    const COMPLIMENTS = [
+      "तुम्हारी मुस्कान इतनी सच्ची है कि कोई भी परेशान इंसान तुम्हें देखकर अपनी टेंशन भूल जाए! 🌸",
+      "तुम सिर्फ़ एक अच्छी दोस्त ही नहीं, बल्कि ज़िंदगी का सबसे खूबसूरत तोहफ़ा हो! 🎁",
+      "पारंपरिक ड्रेस हो या कैज़ुअल लुक—तुम्हारी सादगी हर रूप में चार चाँद लगा देती है! ✨",
+      "बिना जज किए हर बात सुनना और हमेशा सही सलाह देना तुम्हारी सबसे प्यारी खूबी है! 🤝",
+      "दीयों की रोशनी तो कुछ घंटों की होती है, पर तुम्हारी दोस्ती पूरे साल ज़िंदगी को रोशन रखती है! 🪔",
+      "तुम्हारे साथ बिताया हर छोटा सा पल भी एक यादगार कहानी बन जाता है! 📸",
+      "भगवान करे तुम्हारी ज़िंदगी में कभी कोई अंधेरा न आए और हर दिन दिवाली जैसा जगमगाए! 🎇",
+      "दुनिया में करोड़ों लोग हैं, पर मेरे लिए सबसे बेस्ट और सच्चा दोस्त सिर्फ़ तुम हो! 💖"
+    ];
+
+    const PAGE_TITLES = {
+      1: "Page 1 of 5 • Shubh Deepawali",
+      2: "Page 2 of 5 • Dosti Ki Shayari",
+      3: "Page 3 of 5 • 9 Yaadein Gallery",
+      4: "Page 4 of 5 • Khaas Diwali Khat",
+      5: "Page 5 of 5 • Diwali Utsav & Mithai"
+    };
+
+    // ==========================================
+    // 2. STATE & WEB AUDIO SYNTHESIZER
+    // ==========================================
+    let currentPage = 1;
+    let currentFilter = "all";
+    let currentComplimentIndex = 0;
+    let currentLightboxIndex = 0;
+    let slideshowTimer = null;
+    let autoStoryTimer = null;
+    let soundEnabled = true;
+    let audioCtx = null;
+    let lanternCount = 3;
+
+    function initAudio() {
+      if (!audioCtx) {
+        const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+        if (AudioContextClass) {
+          audioCtx = new AudioContextClass();
+        }
+      }
+      if (audioCtx && audioCtx.state === "suspended") {
+        audioCtx.resume();
+      }
+    }
+
+    function playFestiveChime(type = "chime") {
+      if (!soundEnabled) return;
+      try {
+        initAudio();
+        if (!audioCtx) return;
+        const now = audioCtx.currentTime;
+        if (type === "chime") {
+          const notes = [523.25, 659.25, 783.99, 1046.5];
+          notes.forEach((freq, idx) => {
+            const osc = audioCtx.createOscillator();
+            const gain = audioCtx.createGain();
+            osc.type = "sine";
+            osc.frequency.setValueAtTime(freq, now + idx * 0.065);
+            gain.gain.setValueAtTime(0.07, now + idx * 0.065);
+            gain.gain.exponentialRampToValueAtTime(0.001, now + idx * 0.065 + 0.42);
+            osc.connect(gain);
+            gain.connect(audioCtx.destination);
+            osc.start(now + idx * 0.065);
+            osc.stop(now + idx * 0.065 + 0.44);
+          });
+        } else if (type === "sparkle") {
+          const freqs = [660, 880, 1174.66, 1318.5, 1760];
+          freqs.forEach((freq, idx) => {
+            const osc = audioCtx.createOscillator();
+            const gain = audioCtx.createGain();
+            osc.type = "triangle";
+            osc.frequency.setValueAtTime(freq, now + idx * 0.045);
+            gain.gain.setValueAtTime(0.065, now + idx * 0.045);
+            gain.gain.exponentialRampToValueAtTime(0.001, now + idx * 0.045 + 0.35);
+            osc.connect(gain);
+            gain.connect(audioCtx.destination);
+            osc.start(now + idx * 0.045);
+            osc.stop(now + idx * 0.045 + 0.36);
+          });
+        }
+      } catch (e) {
+        // Ignore audio errors if blocked
+      }
+    }
+
+    function showToast(msg) {
+      const toast = document.getElementById("toastBanner");
+      toast.textContent = msg;
+      toast.classList.remove("hidden");
+      clearTimeout(window._toastTimer);
+      window._toastTimer = setTimeout(() => {
+        toast.classList.add("hidden");
+      }, 2500);
+    }
+
+    // ==========================================
+    // 3. SEQUENTIAL MULTI-PAGE NAVIGATION (1 TO 5)
+    // ==========================================
+    function switchPage(pageNum) {
+      const target = Math.max(1, Math.min(5, Number(pageNum)));
+      currentPage = target;
+
+      document.querySelectorAll(".page-section").forEach((sec, idx) => {
+        if (idx + 1 === currentPage) {
+          sec.classList.remove("active");
+          void sec.offsetWidth; // trigger fresh sequential animation
+          sec.classList.add("active");
+        } else {
+          sec.classList.remove("active");
+        }
+      });
+
+      document.querySelectorAll(".nav-tab").forEach((btn) => {
+        const p = Number(btn.getAttribute("data-page"));
+        if (p === currentPage) {
+          btn.className = "nav-tab flex-1 sm:flex-initial text-center px-3 py-1.5 rounded-full text-xs sm:text-sm font-bold transition-all whitespace-nowrap bg-gradient-to-r from-yellow-400 via-amber-500 to-orange-500 text-red-950 shadow-md shadow-amber-500/30";
+        } else {
+          btn.className = "nav-tab flex-1 sm:flex-initial text-center px-3 py-1.5 rounded-full text-xs sm:text-sm font-medium transition-all whitespace-nowrap text-amber-100/85 bg-red-950/50 border border-amber-500/25 hover:bg-amber-500/20";
+        }
+      });
+
+      // Update Desktop & Mobile indicators
+      document.getElementById("pageProgressBar").style.width = (currentPage * 20) + "%";
+      document.getElementById("bottomPageIndicator").textContent = PAGE_TITLES[currentPage];
+      document.getElementById("prevPageBtn").disabled = currentPage === 1;
+      document.getElementById("mobilePrevPageBtn").disabled = currentPage === 1;
+      document.getElementById("mobilePageLabel").textContent = `Page ${currentPage} / 5 • Ek Ke Baad Ek`;
+
+      // Update mobile dots
+      const dotsContainer = document.getElementById("mobilePageDots");
+      if (dotsContainer) {
+        dotsContainer.innerHTML = [1, 2, 3, 4, 5].map((n) =>
+          n === currentPage
+            ? `<span class="w-4 h-2 rounded-full bg-amber-400 transition-all"></span>`
+            : `<span class="w-2 h-2 rounded-full bg-amber-400/30 transition-all"></span>`
+        ).join("");
+      }
+
+      const nextBtn = document.getElementById("nextPageBtn");
+      const mobNextBtn = document.getElementById("mobileNextPageBtn");
+      if (currentPage === 5) {
+        nextBtn.textContent = "🏠 Wapas Page 1";
+        mobNextBtn.textContent = "🏠 Page 1";
+      } else {
+        nextBtn.textContent = `Agla Page (${currentPage + 1}/5) →`;
+        mobNextBtn.textContent = `Page ${currentPage + 1} →`;
+      }
+
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      playFestiveChime("chime");
+      launchRocket(window.innerWidth * 0.3);
+      launchRocket(window.innerWidth * 0.7);
+    }
+
+    function toggleAutoStoryMode() {
+      const iconEl = document.getElementById("autoStoryIcon");
+      const labelEl = document.getElementById("autoStoryLabel");
+      if (autoStoryTimer) {
+        clearInterval(autoStoryTimer);
+        autoStoryTimer = null;
+        iconEl.textContent = "▶";
+        labelEl.textContent = "Auto Page Play: OFF";
+        showToast("⏸ Auto Page Play ruk gaya.");
+      } else {
+        iconEl.textContent = "⏸";
+        labelEl.textContent = "Auto Page Play: ON";
+        showToast("▶ Auto Story Chalu: Ek ke baad ek page khulega!");
+        autoStoryTimer = setInterval(() => {
+          const next = currentPage < 5 ? currentPage + 1 : 1;
+          switchPage(next);
+        }, 6500);
+      }
+    }
+
+    // ==========================================
+    // 4. DIYA CEREMONY RENDERING (PAGE 1)
+    // ==========================================
+    function renderDiyas() {
+      const grid = document.getElementById("diyaCeremonyGrid");
+      grid.innerHTML = "";
+      let litCount = 0;
+
+      DIYA_DATA.forEach((diya, index) => {
+        if (diya.lit) litCount++;
+        const card = document.createElement("button");
+        card.type = "button";
+        card.className = `p-3 sm:p-4 rounded-2xl border transition-all flex flex-col items-center text-center group active:scale-95 ${
+          diya.lit
+            ? "bg-gradient-to-b from-amber-500/30 via-orange-700/30 to-red-950/90 border-amber-300 shadow-lg shadow-amber-500/25"
+            : "bg-red-950/60 border-amber-500/30 hover:border-amber-400/70 opacity-85 hover:opacity-100"
+        }`;
+
+        card.innerHTML = `
+          <div class="relative w-14 h-14 sm:w-16 sm:h-16 flex items-center justify-center mb-1.5">
+            <svg viewBox="0 0 64 64" class="w-12 h-12 sm:w-14 sm:h-14 overflow-visible">
+              ${
+                diya.lit
+                  ? `<g class="diya-flame">
+                      <path d="M32 4 C24 18 21 25 32 33 C43 25 40 18 32 4 Z" fill="#fef08a"/>
+                      <path d="M32 10 C27 20 25 25 32 31 C39 25 37 20 32 10 Z" fill="#ea580c"/>
+                    </g>`
+                  : `<circle cx="32" cy="26" r="3" fill="#78350f" />`
+              }
+              <path d="M10 34 Q32 40 54 34 L46 50 Q32 56 18 50 Z" fill="${diya.lit ? '#d97706' : '#78350f'}" stroke="#fbbf24" stroke-width="1.8"/>
+              <path d="M14 36 Q32 41 50 36" stroke="#fef08a" stroke-width="1.4" fill="none"/>
+            </svg>
+          </div>
+          <span class="font-bold text-xs sm:text-sm ${diya.lit ? 'text-amber-300' : 'text-amber-100/75'}">${diya.title}</span>
+          <span class="text-[10px] sm:text-[11px] mt-0.5 ${diya.lit ? 'text-yellow-200 font-semibold' : 'text-amber-300/60'}">${diya.lit ? '🪔 Roshan Hai' : 'Touch to Light'}</span>
+        `;
+
+        card.addEventListener("click", (e) => {
+          DIYA_DATA[index].lit = !DIYA_DATA[index].lit;
+          if (DIYA_DATA[index].lit) {
+            document.getElementById("diyaBlessingBanner").innerHTML = `🪔 <strong>${diya.title}:</strong> "${diya.blessing}"`;
+            playFestiveChime("sparkle");
+            const rect = e.currentTarget.getBoundingClientRect();
+            spawnFireworkBurst(rect.left + rect.width / 2, rect.top + 15);
+          }
+          renderDiyas();
+        });
+
+        grid.appendChild(card);
+      });
+
+      document.getElementById("diyaCountBadge").textContent = `Lit: ${litCount} / 5 Diyas`;
+      if (litCount === 5) {
+        document.getElementById("diyaBlessingBanner").innerHTML =
+          `🎉 <strong>पाँचों दीये जल उठे!</strong> भगवान करे तुम्हारी ज़िंदगी भी हमेशा ऐसे ही खुशियों, प्यार और कामयाबी से जगमगाती रहे!`;
+      }
+    }
+
+    // ==========================================
+    // 5. GALLERY RENDERING & LIGHTBOX (PAGE 3)
+    // ==========================================
+    function renderGallery() {
+      const grid = document.getElementById("photoGalleryGrid");
+      grid.innerHTML = "";
+
+      const filtered = PHOTO_MEMORIES.filter(
+        (item) => currentFilter === "all" || item.category === currentFilter
+      );
+
+      filtered.forEach((item) => {
+        const card = document.createElement("div");
+        card.className = "polaroid-card glass-card gold-border-glow rounded-2xl sm:rounded-3xl p-2.5 sm:p-3.5 flex flex-col justify-between cursor-pointer group";
+        card.style.transform = `rotate(${item.rotation})`;
+
+        card.innerHTML = `
+          <div>
+            <div class="relative rounded-xl sm:rounded-2xl overflow-hidden aspect-[4/5] bg-red-950 mb-2.5">
+              <img src="${item.src}" alt="${item.title}" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" />
+              <div class="absolute top-2 left-2">
+                <span class="px-2 py-0.5 rounded-full text-[9px] sm:text-[11px] font-bold bg-black/75 text-amber-300 border border-amber-400/50 backdrop-blur-sm">
+                  ${item.badge}
+                </span>
+              </div>
+              <div class="absolute bottom-2 right-2 w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-amber-400 text-red-950 flex items-center justify-center font-bold text-xs shadow-md opacity-95 group-hover:scale-110 transition">
+                🔍
+              </div>
+            </div>
+            <h3 class="font-royal text-xs sm:text-lg text-amber-300 font-bold mb-1 leading-snug">${item.title}</h3>
+            <p class="text-[11px] sm:text-sm text-amber-100/90 leading-relaxed line-clamp-3 sm:line-clamp-none">${item.caption}</p>
+          </div>
+          <div class="mt-2.5 pt-2 border-t border-amber-500/25 flex items-center justify-between text-[10px] sm:text-[11px] text-amber-300/80">
+            <span>📸 Photo #${item.id + 1}/9</span>
+            <span class="group-hover:text-amber-300 font-semibold">Zoom →</span>
+          </div>
+        `;
+
+        card.addEventListener("click", () => openLightbox(item.id));
+        grid.appendChild(card);
+      });
+    }
+
+    function openLightbox(index) {
+      currentLightboxIndex = (index + PHOTO_MEMORIES.length) % PHOTO_MEMORIES.length;
+      const item = PHOTO_MEMORIES[currentLightboxIndex];
+      document.getElementById("lightboxImage").src = item.src;
+      document.getElementById("lightboxTitle").textContent = item.title;
+      document.getElementById("lightboxBadge").textContent = `${item.badge} • Photo ${item.id + 1} of 9`;
+      document.getElementById("lightboxCaption").textContent = `"${item.caption}"`;
+      document.getElementById("lightboxModal").classList.remove("hidden");
+      playFestiveChime("chime");
+    }
+
+    function closeLightbox() {
+      document.getElementById("lightboxModal").classList.add("hidden");
+      stopSlideshow();
+    }
+
+    function toggleSlideshow() {
+      const btn = document.getElementById("lightboxSlideshowToggle");
+      if (slideshowTimer) {
+        stopSlideshow();
+      } else {
+        btn.textContent = "⏸ Pause";
+        slideshowTimer = setInterval(() => {
+          openLightbox(currentLightboxIndex + 1);
+        }, 2800);
+      }
+    }
+
+    function stopSlideshow() {
+      if (slideshowTimer) {
+        clearInterval(slideshowTimer);
+        slideshowTimer = null;
+      }
+      const btn = document.getElementById("lightboxSlideshowToggle");
+      if (btn) btn.textContent = "▶ Auto Play";
+    }
+
+    // ==========================================
+    // 6. DIWALI SKY LANTERNS, ROCKETS & FIREWORKS CANVAS
+    // ==========================================
+    function spawnSkyLantern(wishText) {
+      const layer = document.getElementById("floatingLanternsLayer");
+      if (!layer) return;
+      const lantern = document.createElement("div");
+      const leftPos = 10 + Math.random() * 76;
+      lantern.className = "absolute bottom-2 flex flex-col items-center transition-all duration-[8500ms] ease-out";
+      lantern.style.left = `${leftPos}%`;
+
+      lantern.innerHTML = `
+        <div class="w-9 h-11 sm:w-10 sm:h-12 rounded-t-2xl rounded-b-lg bg-gradient-to-b from-yellow-200 via-amber-400 to-red-600 shadow-[0_0_25px_#fbbf24] flex items-center justify-center text-xs font-bold text-red-950 border border-yellow-100">
+          🪔
+        </div>
+        <span class="mt-1 px-2 py-0.5 rounded-full bg-black/80 text-[9px] sm:text-[10px] text-amber-200 border border-amber-400/40 whitespace-nowrap max-w-[160px] truncate">
+          ${wishText}
+        </span>
+      `;
+
+      layer.appendChild(lantern);
+      requestAnimationFrame(() => {
+        lantern.style.transform = `translateY(-240px) translateX(${(Math.random() - 0.5) * 45}px) scale(0.84)`;
+        lantern.style.opacity = "0.15";
+      });
+
+      setTimeout(() => {
+        lantern.remove();
+      }, 8500);
+    }
+
+    // Background Canvas Fireworks, Rockets & Golden Diwali Sparkles
+    const canvas = document.getElementById("festiveCanvas");
+    const ctx = canvas.getContext("2d");
+    let particles = [];
+    let rockets = [];
+    let ambientStars = [];
+
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+
+    function initAmbientStars() {
+      ambientStars = [];
+      for (let i = 0; i < 48; i++) {
+        ambientStars.push({
+          x: Math.random() * window.innerWidth,
+          y: Math.random() * window.innerHeight,
+          r: Math.random() * 2.2 + 0.7,
+          vy: -(Math.random() * 0.45 + 0.15),
+          alpha: Math.random() * 0.7 + 0.25
+        });
+      }
+    }
+
+    function launchRocket(xPos) {
+      const x = xPos || (window.innerWidth * (0.15 + Math.random() * 0.7));
+      rockets.push({
+        x,
+        y: window.innerHeight,
+        vy: -(Math.random() * 5 + 8.5),
+        targetY: window.innerHeight * (0.15 + Math.random() * 0.35),
+        color: "#fef08a"
+      });
+    }
+
+    function spawnFireworkBurst(x, y) {
+      const colors = ["#fef08a", "#fbbf24", "#f97316", "#ef4444", "#fb7185", "#34d399"];
+      const count = 42;
+      for (let i = 0; i < count; i++) {
+        const angle = (Math.PI * 2 * i) / count + (Math.random() - 0.5) * 0.15;
+        const speed = Math.random() * 4.8 + 1.4;
+        particles.push({
+          x,
+          y,
+          vx: Math.cos(angle) * speed,
+          vy: Math.sin(angle) * speed,
+          color: colors[Math.floor(Math.random() * colors.length)],
+          alpha: 1,
+          size: Math.random() * 3 + 1.2
+        });
+      }
+    }
+
+    function animateCanvas() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      // Draw rising golden Diwali sparkles
+      ambientStars.forEach((s) => {
+        s.y += s.vy;
+        if (s.y < 0) {
+          s.y = canvas.height;
+          s.x = Math.random() * canvas.width;
+        }
+        ctx.beginPath();
+        ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(253, 224, 71, ${s.alpha})`;
+        ctx.fill();
+      });
+
+      // Update & draw rising Diwali rockets
+      for (let i = rockets.length - 1; i >= 0; i--) {
+        const r = rockets[i];
+        r.y += r.vy;
+        ctx.beginPath();
+        ctx.arc(r.x, r.y, 2.8, 0, Math.PI * 2);
+        ctx.fillStyle = r.color;
+        ctx.fill();
+
+        if (r.y <= r.targetY) {
+          spawnFireworkBurst(r.x, r.y);
+          rockets.splice(i, 1);
+        }
+      }
+
+      // Draw firework burst particles
+      for (let i = particles.length - 1; i >= 0; i--) {
+        const p = particles[i];
+        p.x += p.vx;
+        p.y += p.vy;
+        p.vy += 0.055; // gravity
+        p.alpha -= 0.017;
+        if (p.alpha <= 0) {
+          particles.splice(i, 1);
+          continue;
+        }
+        ctx.save();
+        ctx.globalAlpha = Math.max(0, p.alpha);
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+        ctx.fillStyle = p.color;
+        ctx.fill();
+        ctx.restore();
+      }
+
+      requestAnimationFrame(animateCanvas);
+    }
+
+    // ==========================================
+    // 7. EVENT LISTENERS INITIALIZATION
+    // ==========================================
+    window.addEventListener("DOMContentLoaded", () => {
+      resizeCanvas();
+      initAmbientStars();
+      animateCanvas();
+      window.addEventListener("resize", resizeCanvas);
+
+      // Periodic ambient Diwali rocket in background every 5 seconds
+      setInterval(() => {
+        if (document.visibilityState !== "hidden") {
+          launchRocket();
+        }
+      }, 4800);
+
+      renderDiyas();
+      renderGallery();
+      document.querySelectorAll("img[data-photo-id]").forEach((imgEl) => {
+        const pid = Number(imgEl.getAttribute("data-photo-id"));
+        if (PHOTO_MEMORIES[pid]) imgEl.src = PHOTO_MEMORIES[pid].src;
+      });
+
+      // Seed initial sky lanterns
+      spawnSkyLantern("Shubh Deepawali Bestie! 🪔");
+      setTimeout(() => spawnSkyLantern("Hamesha Muskurate Raho ✨"), 1200);
+
+      // Auto Story Play Toggle
+      document.getElementById("autoStoryToggleBtn").addEventListener("click", toggleAutoStoryMode);
+
+      // Brand button -> Page 1
+      document.getElementById("brandHomeBtn").addEventListener("click", () => switchPage(1));
+
+      // Top Nav Tabs
+      document.querySelectorAll(".nav-tab").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          switchPage(Number(btn.getAttribute("data-page")));
+        });
+      });
+
+      // Goto buttons inside pages (Sequential "Ek ke baad ek" buttons)
+      document.querySelectorAll(".goto-btn").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          switchPage(Number(btn.getAttribute("data-goto")));
+        });
+      });
+
+      // Desktop Prev / Next Page buttons
+      document.getElementById("prevPageBtn").addEventListener("click", () => {
+        if (currentPage > 1) switchPage(currentPage - 1);
+      });
+      document.getElementById("nextPageBtn").addEventListener("click", () => {
+        if (currentPage < 5) {
+          switchPage(currentPage + 1);
+        } else {
+          switchPage(1);
+        }
+      });
+
+      // Mobile Sticky Bar Prev / Next Page buttons
+      document.getElementById("mobilePrevPageBtn").addEventListener("click", () => {
+        if (currentPage > 1) switchPage(currentPage - 1);
+      });
+      document.getElementById("mobileNextPageBtn").addEventListener("click", () => {
+        if (currentPage < 5) {
+          switchPage(currentPage + 1);
+        } else {
+          switchPage(1);
+        }
+      });
+
+      // Mobile Touch Swipe Left / Right Support for Sequential Page Opening
+      let touchStartX = 0;
+      let touchStartY = 0;
+      const mainArea = document.getElementById("mainTouchArea");
+      mainArea.addEventListener("touchstart", (e) => {
+        if (e.touches && e.touches.length === 1) {
+          touchStartX = e.touches[0].clientX;
+          touchStartY = e.touches[0].clientY;
+        }
+      }, { passive: true });
+
+      mainArea.addEventListener("touchend", (e) => {
+        if (!e.changedTouches || e.changedTouches.length === 0) return;
+        const dx = e.changedTouches[0].clientX - touchStartX;
+        const dy = e.changedTouches[0].clientY - touchStartY;
+        if (Math.abs(dx) > 75 && Math.abs(dx) > Math.abs(dy) * 1.5) {
+          if (dx < 0 && currentPage < 5) {
+            switchPage(currentPage + 1);
+          } else if (dx > 0 && currentPage > 1) {
+            switchPage(currentPage - 1);
+          }
+        }
+      }, { passive: true });
+
+      // Friend Name Personalizer
+      function updateFriendName() {
+        const raw = document.getElementById("friendNameInput").value.trim();
+        const name = raw || "Mere Pyare Dost";
+        document.querySelectorAll(".friend-name-display").forEach((el) => {
+          el.textContent = name;
+        });
+        playFestiveChime("sparkle");
+        spawnFireworkBurst(window.innerWidth * 0.5, window.innerHeight * 0.3);
+        showToast(`💖 Dost ka naam set ho gaya: ${name}!`);
+      }
+      document.getElementById("saveFriendNameBtn").addEventListener("click", updateFriendName);
+      document.getElementById("friendNameInput").addEventListener("keydown", (e) => {
+        if (e.key === "Enter") updateFriendName();
+      });
+
+      // Light All Diyas button
+      document.getElementById("lightAllDiyasBtn").addEventListener("click", () => {
+        DIYA_DATA.forEach((d) => (d.lit = true));
+        renderDiyas();
+        playFestiveChime("sparkle");
+        spawnFireworkBurst(window.innerWidth * 0.3, window.innerHeight * 0.4);
+        spawnFireworkBurst(window.innerWidth * 0.7, window.innerHeight * 0.4);
+        showToast("🪔 Paanchon Diye Roshan Ho Gaye!");
+      });
+
+      // Static images with data-lightbox-index
+      document.querySelectorAll("[data-lightbox-index]").forEach((el) => {
+        el.addEventListener("click", () => {
+          openLightbox(Number(el.getAttribute("data-lightbox-index")));
+        });
+      });
+
+      // Copy Shayari buttons
+      document.querySelectorAll(".copy-shayari-btn").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const targetId = btn.getAttribute("data-copy-target");
+          const text = document.getElementById(targetId).innerText;
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(text).catch(() => {});
+          } else {
+            const ta = document.createElement("textarea");
+            ta.value = text;
+            document.body.appendChild(ta);
+            ta.select();
+            document.execCommand("copy");
+            ta.remove();
+          }
+          playFestiveChime("chime");
+          showToast("📋 Shayari Copy Ho Gayi!");
+        });
+      });
+
+      // Like buttons on Shayari cards
+      document.querySelectorAll(".like-btn").forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+          const countEl = btn.querySelector(".like-count");
+          countEl.textContent = Number(countEl.textContent) + 1;
+          playFestiveChime("chime");
+          const rect = e.currentTarget.getBoundingClientRect();
+          spawnFireworkBurst(rect.left + rect.width / 2, rect.top);
+        });
+      });
+
+      // Gallery Category Filters
+      document.querySelectorAll(".gallery-filter-btn").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          currentFilter = btn.getAttribute("data-filter");
+          document.querySelectorAll(".gallery-filter-btn").forEach((b) => {
+            if (b.getAttribute("data-filter") === currentFilter) {
+              b.className = "gallery-filter-btn px-3 py-1.5 rounded-xl text-xs font-bold bg-amber-400 text-red-950 whitespace-nowrap transition";
+            } else {
+              b.className = "gallery-filter-btn px-3 py-1.5 rounded-xl text-xs font-medium text-amber-200 hover:bg-amber-500/20 whitespace-nowrap transition";
+            }
+          });
+          renderGallery();
+        });
+      });
+
+      // Start Slideshow from Page 3
+      document.getElementById("startSlideshowBtn").addEventListener("click", () => {
+        openLightbox(0);
+        toggleSlideshow();
+      });
+
+      // Lightbox controls
+      document.getElementById("closeLightboxBtn").addEventListener("click", closeLightbox);
+      document.getElementById("lightboxPrevBtn").addEventListener("click", () => openLightbox(currentLightboxIndex - 1));
+      document.getElementById("lightboxNextBtn").addEventListener("click", () => openLightbox(currentLightboxIndex + 1));
+      document.getElementById("lightboxSlideshowToggle").addEventListener("click", toggleSlideshow);
+      document.getElementById("lightboxModal").addEventListener("click", (e) => {
+        if (e.target.id === "lightboxModal") closeLightbox();
+      });
+
+      // Letter Language Toggle (Page 4)
+      document.getElementById("toggleLetterLangBtn").addEventListener("click", () => {
+        const hi = document.getElementById("letterContentHindi");
+        const en = document.getElementById("letterContentHinglish");
+        hi.classList.toggle("hidden");
+        en.classList.toggle("hidden");
+        playFestiveChime("chime");
+      });
+
+      // Next Compliment Button (Page 4)
+      document.getElementById("nextComplimentBtn").addEventListener("click", (e) => {
+        currentComplimentIndex = (currentComplimentIndex + 1) % COMPLIMENTS.length;
+        document.getElementById("complimentDisplayBox").textContent = `"${COMPLIMENTS[currentComplimentIndex]}"`;
+        e.currentTarget.textContent = `✨ Naya Compliment Kholo (${currentComplimentIndex + 1} / ${COMPLIMENTS.length})`;
+        playFestiveChime("sparkle");
+        const rect = e.currentTarget.getBoundingClientRect();
+        spawnFireworkBurst(rect.left + rect.width / 2, rect.top);
+      });
+
+      // Sweet Box Cards (Page 5)
+      const sweetMessages = {
+        kaju: "💎 Kaju Katli Khayi! Tumhari dosti bhi chandi ki tarah hamesha chamakti rahe!",
+        jamun: "🍯 Garam Gulab Jamun! Muh meetha ho gaya—ab ek pyari si smile de do!",
+        ladoo: "🟠 Motichoor Ka Ladoo! Shagun pura hua, Happy Diwali Mere Dost!",
+        choco: "🍫 Festive Dryfruit Chocolate! Sweetest gift for the sweetest bestie!"
+      };
+      document.querySelectorAll(".sweet-card-btn").forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+          const key = btn.getAttribute("data-sweet");
+          const msg = sweetMessages[key] || "🍬 Muh Meetha Karo!";
+          document.getElementById("sweetStatusText").textContent = msg;
+          playFestiveChime("sparkle");
+          const rect = e.currentTarget.getBoundingClientRect();
+          spawnFireworkBurst(rect.left + rect.width / 2, rect.top);
+          showToast(msg);
+        });
+      });
+
+      // Sky Lantern Launcher (Page 5)
+      document.getElementById("launchLanternBtn").addEventListener("click", () => {
+        const input = document.getElementById("customWishInput");
+        const wish = input.value.trim() || "Happy Diwali Mere Dost! 🪔";
+        lanternCount++;
+        document.getElementById("lanternCounterText").textContent = `Sky Wishes Launched: ${lanternCount}`;
+        spawnSkyLantern(wish);
+        playFestiveChime("sparkle");
+        launchRocket(window.innerWidth * 0.35);
+        launchRocket(window.innerWidth * 0.65);
+        showToast("🏮 Aakash Kandil Aasman Mein Ud Gaya!");
+      });
+
+      // Grand 5 Rockets Button (Page 5)
+      document.getElementById("grandFireworksBtn").addEventListener("click", () => {
+        playFestiveChime("sparkle");
+        for (let i = 0; i < 5; i++) {
+          setTimeout(() => {
+            launchRocket(window.innerWidth * (0.15 + i * 0.17));
+          }, i * 180);
+        }
+        showToast("🚀 Grand Diwali Aatishbaazi!");
+      });
+
+      // Click inside Sky Stage for Fireworks
+      document.getElementById("lanternSkyStage").addEventListener("click", (e) => {
+        spawnFireworkBurst(e.clientX, e.clientY);
+        const wish = document.getElementById("customWishInput").value.trim() || "Shubh Deepawali! ✨";
+        spawnSkyLantern(wish);
+        lanternCount++;
+        document.getElementById("lanternCounterText").textContent = `Sky Wishes Launched: ${lanternCount}`;
+        playFestiveChime("sparkle");
+      });
+
+      // Header Quick Sparkle & Sound Toggle (Desktop + Mobile)
+      function triggerQuickFireworks() {
+        playFestiveChime("sparkle");
+        launchRocket(window.innerWidth * 0.25);
+        launchRocket(window.innerWidth * 0.5);
+        launchRocket(window.innerWidth * 0.75);
+        spawnFireworkBurst(window.innerWidth * 0.5, window.innerHeight * 0.28);
+      }
+      document.getElementById("quickSparkleBtn").addEventListener("click", triggerQuickFireworks);
+      document.getElementById("quickSparkleBtnMobile").addEventListener("click", triggerQuickFireworks);
+
+      function toggleSound() {
+        soundEnabled = !soundEnabled;
+        document.getElementById("soundIcon").textContent = soundEnabled ? "🔊" : "🔇";
+        document.getElementById("soundIconMobile").textContent = soundEnabled ? "🔊" : "🔇";
+        document.getElementById("soundLabel").textContent = soundEnabled ? "Sound On" : "Muted";
+        if (soundEnabled) playFestiveChime("chime");
+      }
+      document.getElementById("soundToggleBtn").addEventListener("click", toggleSound);
+      document.getElementById("soundToggleBtnMobile").addEventListener("click", toggleSound);
+    });
+  </script>
+</body>
+</html>
